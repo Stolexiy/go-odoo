@@ -172,12 +172,14 @@ type ProductProduct struct {
 	XStudioCharFieldYwxuy                  *String    `xmlrpc:"x_studio_char_field_Ywxuy,omptempty"`
 	XStudioCharFieldJt0OE                  *String    `xmlrpc:"x_studio_char_field_jt0OE,omptempty"`
 	XStudioCharFieldML2Po                  *String    `xmlrpc:"x_studio_char_field_mL2Po,omptempty"`
+	XStudioCharFieldQLftU                  *String    `xmlrpc:"x_studio_char_field_qLftU,omptempty"`
 	XStudioCharFieldVa7IB                  *String    `xmlrpc:"x_studio_char_field_va7iB,omptempty"`
 	XStudioCharFieldXZFU2                  *String    `xmlrpc:"x_studio_char_field_xZFU2,omptempty"`
 	XStudioCollection                      *Relation  `xmlrpc:"x_studio_collection,omptempty"`
 	XStudioCollectionId                    *String    `xmlrpc:"x_studio_collection_id,omptempty"`
 	XStudioCountry                         *Relation  `xmlrpc:"x_studio_country,omptempty"`
 	XStudioCountryRef                      *Relation  `xmlrpc:"x_studio_country_ref,omptempty"`
+	XStudioFormatDescription               *String    `xmlrpc:"x_studio_format_description,omptempty"`
 	XStudioGenre                           *Relation  `xmlrpc:"x_studio_genre,omptempty"`
 	XStudioInstanceId                      *Int       `xmlrpc:"x_studio_instance_id,omptempty"`
 	XStudioIntegerFieldYOcml               *Int       `xmlrpc:"x_studio_integer_field_YOcml,omptempty"`

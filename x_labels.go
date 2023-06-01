@@ -6,14 +6,17 @@ import (
 
 // XLabels represents x_labels model.
 type XLabels struct {
-	LastUpdate  *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate  *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid   *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName *String   `xmlrpc:"display_name,omptempty"`
-	Id          *Int      `xmlrpc:"id,omptempty"`
-	WriteDate   *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid    *Many2One `xmlrpc:"write_uid,omptempty"`
-	XName       *String   `xmlrpc:"x_name,omptempty"`
+	LastUpdate                *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate                *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid                 *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName               *String   `xmlrpc:"display_name,omptempty"`
+	Id                        *Int      `xmlrpc:"id,omptempty"`
+	WriteDate                 *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid                  *Many2One `xmlrpc:"write_uid,omptempty"`
+	XName                     *String   `xmlrpc:"x_name,omptempty"`
+	XStudioDiscogsId          *Int      `xmlrpc:"x_studio_discogs_id,omptempty"`
+	XStudioOne2ManyFieldNvozS *Relation `xmlrpc:"x_studio_one2many_field_nvozS,omptempty"`
+	XStudioReleases           *Relation `xmlrpc:"x_studio_releases,omptempty"`
 }
 
 // XLabelss represents array of x_labels model.
