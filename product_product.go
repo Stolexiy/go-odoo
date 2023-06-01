@@ -189,6 +189,7 @@ type ProductProduct struct {
 	XStudioMany2ManyFieldMC7Xf             *Relation  `xmlrpc:"x_studio_many2many_field_MC7Xf,omptempty"`
 	XStudioMany2ManyFieldPbGXA             *Relation  `xmlrpc:"x_studio_many2many_field_PbGXA,omptempty"`
 	XStudioMany2ManyFieldT0UBA             *Relation  `xmlrpc:"x_studio_many2many_field_T0UBA,omptempty"`
+	XStudioMany2ManyFieldWWn47             *Relation  `xmlrpc:"x_studio_many2many_field_WWn47,omptempty"`
 	XStudioMany2ManyFieldH9EBT             *Relation  `xmlrpc:"x_studio_many2many_field_h9EBT,omptempty"`
 	XStudioMany2ManyFieldKoBkM             *Relation  `xmlrpc:"x_studio_many2many_field_koBkM,omptempty"`
 	XStudioMany2ManyFieldVlIm5             *Relation  `xmlrpc:"x_studio_many2many_field_vlIm5,omptempty"`
@@ -198,6 +199,7 @@ type ProductProduct struct {
 	XStudioNotes                           *String    `xmlrpc:"x_studio_notes,omptempty"`
 	XStudioOne2ManyFieldMkcRR              *Relation  `xmlrpc:"x_studio_one2many_field_MkcRR,omptempty"`
 	XStudioProductFormat                   *Selection `xmlrpc:"x_studio_product_format,omptempty"`
+	XStudioRelease                         *Relation  `xmlrpc:"x_studio_release,omptempty"`
 	XStudioReleaseId                       *String    `xmlrpc:"x_studio_release_id,omptempty"`
 	XStudioReleasePage                     *String    `xmlrpc:"x_studio_release_page,omptempty"`
 	XStudioSelectionField8BqT6             *Selection `xmlrpc:"x_studio_selection_field_8BqT6,omptempty"`
