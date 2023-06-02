@@ -168,11 +168,11 @@ type ProductProduct struct {
 	XStudioArtists3                        *Relation  `xmlrpc:"x_studio_artists3,omptempty"`
 	XStudioArtists1                        *String    `xmlrpc:"x_studio_artists_1,omptempty"`
 	XStudioCharFieldC6Cg6                  *String    `xmlrpc:"x_studio_char_field_C6Cg6,omptempty"`
+	XStudioCharFieldJMSZx                  *String    `xmlrpc:"x_studio_char_field_JMSZx,omptempty"`
 	XStudioCharFieldXgKQ0                  *String    `xmlrpc:"x_studio_char_field_XgKQ0,omptempty"`
 	XStudioCharFieldYwxuy                  *String    `xmlrpc:"x_studio_char_field_Ywxuy,omptempty"`
 	XStudioCharFieldJt0OE                  *String    `xmlrpc:"x_studio_char_field_jt0OE,omptempty"`
 	XStudioCharFieldML2Po                  *String    `xmlrpc:"x_studio_char_field_mL2Po,omptempty"`
-	XStudioCharFieldQLftU                  *String    `xmlrpc:"x_studio_char_field_qLftU,omptempty"`
 	XStudioCharFieldVa7IB                  *String    `xmlrpc:"x_studio_char_field_va7iB,omptempty"`
 	XStudioCharFieldXZFU2                  *String    `xmlrpc:"x_studio_char_field_xZFU2,omptempty"`
 	XStudioCollection                      *Relation  `xmlrpc:"x_studio_collection,omptempty"`
@@ -189,14 +189,12 @@ type ProductProduct struct {
 	XStudioMany2ManyFieldGj4OK             *Relation  `xmlrpc:"x_studio_many2many_field_Gj4OK,omptempty"`
 	XStudioMany2ManyFieldLdYkA             *Relation  `xmlrpc:"x_studio_many2many_field_LdYkA,omptempty"`
 	XStudioMany2ManyFieldMC7Xf             *Relation  `xmlrpc:"x_studio_many2many_field_MC7Xf,omptempty"`
+	XStudioMany2ManyFieldOgrsg             *Relation  `xmlrpc:"x_studio_many2many_field_Ogrsg,omptempty"`
 	XStudioMany2ManyFieldPbGXA             *Relation  `xmlrpc:"x_studio_many2many_field_PbGXA,omptempty"`
 	XStudioMany2ManyFieldT0UBA             *Relation  `xmlrpc:"x_studio_many2many_field_T0UBA,omptempty"`
-	XStudioMany2ManyFieldWWn47             *Relation  `xmlrpc:"x_studio_many2many_field_WWn47,omptempty"`
 	XStudioMany2ManyFieldH9EBT             *Relation  `xmlrpc:"x_studio_many2many_field_h9EBT,omptempty"`
 	XStudioMany2ManyFieldKoBkM             *Relation  `xmlrpc:"x_studio_many2many_field_koBkM,omptempty"`
 	XStudioMany2ManyFieldVlIm5             *Relation  `xmlrpc:"x_studio_many2many_field_vlIm5,omptempty"`
-	XStudioMany2OneFieldG2RXR              *Many2One  `xmlrpc:"x_studio_many2one_field_g2rXR,omptempty"`
-	XStudioMany2OneRelease                 *Many2One  `xmlrpc:"x_studio_many2one_release,omptempty"`
 	XStudioMediaCondition                  *Selection `xmlrpc:"x_studio_media_condition,omptempty"`
 	XStudioNotes                           *String    `xmlrpc:"x_studio_notes,omptempty"`
 	XStudioOne2ManyFieldMkcRR              *Relation  `xmlrpc:"x_studio_one2many_field_MkcRR,omptempty"`
