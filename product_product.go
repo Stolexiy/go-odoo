@@ -196,6 +196,7 @@ type ProductProduct struct {
 	XStudioMany2ManyFieldKoBkM             *Relation  `xmlrpc:"x_studio_many2many_field_koBkM,omptempty"`
 	XStudioMany2ManyFieldVlIm5             *Relation  `xmlrpc:"x_studio_many2many_field_vlIm5,omptempty"`
 	XStudioMediaCondition                  *Selection `xmlrpc:"x_studio_media_condition,omptempty"`
+	XStudioMultilineNotes                  *String    `xmlrpc:"x_studio_multiline_notes,omptempty"`
 	XStudioNotes                           *String    `xmlrpc:"x_studio_notes,omptempty"`
 	XStudioOne2ManyFieldMkcRR              *Relation  `xmlrpc:"x_studio_one2many_field_MkcRR,omptempty"`
 	XStudioProductFormat                   *Selection `xmlrpc:"x_studio_product_format,omptempty"`
