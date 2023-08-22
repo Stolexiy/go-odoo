@@ -38,6 +38,8 @@ type ProductProduct struct {
 	CreateDate                             *Time      `xmlrpc:"create_date,omptempty"`
 	CreateUid                              *Many2One  `xmlrpc:"create_uid,omptempty"`
 	CurrencyId                             *Many2One  `xmlrpc:"currency_id,omptempty"`
+	DateFrom                               *Time      `xmlrpc:"date_from,omptempty"`
+	DateTo                                 *Time      `xmlrpc:"date_to,omptempty"`
 	DefaultCode                            *String    `xmlrpc:"default_code,omptempty"`
 	Description                            *String    `xmlrpc:"description,omptempty"`
 	DescriptionPicking                     *String    `xmlrpc:"description_picking,omptempty"`
@@ -47,6 +49,8 @@ type ProductProduct struct {
 	DescriptionSale                        *String    `xmlrpc:"description_sale,omptempty"`
 	DetailedType                           *Selection `xmlrpc:"detailed_type,omptempty"`
 	DisplayName                            *String    `xmlrpc:"display_name,omptempty"`
+	ExpectedMargin                         *Float     `xmlrpc:"expected_margin,omptempty"`
+	ExpectedMarginRate                     *Float     `xmlrpc:"expected_margin_rate,omptempty"`
 	ExpensePolicy                          *Selection `xmlrpc:"expense_policy,omptempty"`
 	ExpensePolicyTooltip                   *String    `xmlrpc:"expense_policy_tooltip,omptempty"`
 	FreeQty                                *Float     `xmlrpc:"free_qty,omptempty"`
@@ -66,6 +70,7 @@ type ProductProduct struct {
 	ImageVariant512                        *String    `xmlrpc:"image_variant_512,omptempty"`
 	IncomingQty                            *Float     `xmlrpc:"incoming_qty,omptempty"`
 	InvoicePolicy                          *Selection `xmlrpc:"invoice_policy,omptempty"`
+	InvoiceState                           *Selection `xmlrpc:"invoice_state,omptempty"`
 	IsProductVariant                       *Bool      `xmlrpc:"is_product_variant,omptempty"`
 	ListPrice                              *Float     `xmlrpc:"list_price,omptempty"`
 	LocationId                             *Many2One  `xmlrpc:"location_id,omptempty"`
@@ -86,6 +91,7 @@ type ProductProduct struct {
 	NbrMovesIn                             *Int       `xmlrpc:"nbr_moves_in,omptempty"`
 	NbrMovesOut                            *Int       `xmlrpc:"nbr_moves_out,omptempty"`
 	NbrReorderingRules                     *Int       `xmlrpc:"nbr_reordering_rules,omptempty"`
+	NormalCost                             *Float     `xmlrpc:"normal_cost,omptempty"`
 	OptionalProductIds                     *Relation  `xmlrpc:"optional_product_ids,omptempty"`
 	OrderpointIds                          *Relation  `xmlrpc:"orderpoint_ids,omptempty"`
 	OutgoingQty                            *Float     `xmlrpc:"outgoing_qty,omptempty"`
@@ -108,9 +114,12 @@ type ProductProduct struct {
 	PropertyAccountIncomeId                *Many2One  `xmlrpc:"property_account_income_id,omptempty"`
 	PropertyStockInventory                 *Many2One  `xmlrpc:"property_stock_inventory,omptempty"`
 	PropertyStockProduction                *Many2One  `xmlrpc:"property_stock_production,omptempty"`
+	PurchaseAvgPrice                       *Float     `xmlrpc:"purchase_avg_price,omptempty"`
+	PurchaseGap                            *Float     `xmlrpc:"purchase_gap,omptempty"`
 	PurchaseLineWarn                       *Selection `xmlrpc:"purchase_line_warn,omptempty"`
 	PurchaseLineWarnMsg                    *String    `xmlrpc:"purchase_line_warn_msg,omptempty"`
 	PurchaseMethod                         *Selection `xmlrpc:"purchase_method,omptempty"`
+	PurchaseNumInvoiced                    *Float     `xmlrpc:"purchase_num_invoiced,omptempty"`
 	PurchaseOk                             *Bool      `xmlrpc:"purchase_ok,omptempty"`
 	PurchaseOrderLineIds                   *Relation  `xmlrpc:"purchase_order_line_ids,omptempty"`
 	PurchasedProductQty                    *Float     `xmlrpc:"purchased_product_qty,omptempty"`
@@ -122,11 +131,15 @@ type ProductProduct struct {
 	ResponsibleId                          *Many2One  `xmlrpc:"responsible_id,omptempty"`
 	RouteFromCategIds                      *Relation  `xmlrpc:"route_from_categ_ids,omptempty"`
 	RouteIds                               *Relation  `xmlrpc:"route_ids,omptempty"`
+	SaleAvgPrice                           *Float     `xmlrpc:"sale_avg_price,omptempty"`
 	SaleDelay                              *Float     `xmlrpc:"sale_delay,omptempty"`
+	SaleExpected                           *Float     `xmlrpc:"sale_expected,omptempty"`
 	SaleLineWarn                           *Selection `xmlrpc:"sale_line_warn,omptempty"`
 	SaleLineWarnMsg                        *String    `xmlrpc:"sale_line_warn_msg,omptempty"`
+	SaleNumInvoiced                        *Float     `xmlrpc:"sale_num_invoiced,omptempty"`
 	SaleOk                                 *Bool      `xmlrpc:"sale_ok,omptempty"`
 	SalesCount                             *Float     `xmlrpc:"sales_count,omptempty"`
+	SalesGap                               *Float     `xmlrpc:"sales_gap,omptempty"`
 	SellerIds                              *Relation  `xmlrpc:"seller_ids,omptempty"`
 	Sequence                               *Int       `xmlrpc:"sequence,omptempty"`
 	ServiceToPurchase                      *Bool      `xmlrpc:"service_to_purchase,omptempty"`
@@ -142,8 +155,12 @@ type ProductProduct struct {
 	TaxString                              *String    `xmlrpc:"tax_string,omptempty"`
 	TaxesId                                *Relation  `xmlrpc:"taxes_id,omptempty"`
 	ToWeight                               *Bool      `xmlrpc:"to_weight,omptempty"`
+	TotalCost                              *Float     `xmlrpc:"total_cost,omptempty"`
+	TotalMargin                            *Float     `xmlrpc:"total_margin,omptempty"`
+	TotalMarginRate                        *Float     `xmlrpc:"total_margin_rate,omptempty"`
 	TotalValue                             *Float     `xmlrpc:"total_value,omptempty"`
 	Tracking                               *Selection `xmlrpc:"tracking,omptempty"`
+	Turnover                               *Float     `xmlrpc:"turnover,omptempty"`
 	Type                                   *Selection `xmlrpc:"type,omptempty"`
 	UomId                                  *Many2One  `xmlrpc:"uom_id,omptempty"`
 	UomName                                *String    `xmlrpc:"uom_name,omptempty"`
@@ -168,7 +185,7 @@ type ProductProduct struct {
 	XStudioArtists3                        *Relation  `xmlrpc:"x_studio_artists3,omptempty"`
 	XStudioArtists1                        *String    `xmlrpc:"x_studio_artists_1,omptempty"`
 	XStudioCharFieldC6Cg6                  *String    `xmlrpc:"x_studio_char_field_C6Cg6,omptempty"`
-	XStudioCharFieldJMSZx                  *String    `xmlrpc:"x_studio_char_field_JMSZx,omptempty"`
+	XStudioCharFieldGG7SU                  *String    `xmlrpc:"x_studio_char_field_GG7sU,omptempty"`
 	XStudioCharFieldXgKQ0                  *String    `xmlrpc:"x_studio_char_field_XgKQ0,omptempty"`
 	XStudioCharFieldYwxuy                  *String    `xmlrpc:"x_studio_char_field_Ywxuy,omptempty"`
 	XStudioCharFieldJt0OE                  *String    `xmlrpc:"x_studio_char_field_jt0OE,omptempty"`
@@ -189,15 +206,16 @@ type ProductProduct struct {
 	XStudioMany2ManyFieldGj4OK             *Relation  `xmlrpc:"x_studio_many2many_field_Gj4OK,omptempty"`
 	XStudioMany2ManyFieldLdYkA             *Relation  `xmlrpc:"x_studio_many2many_field_LdYkA,omptempty"`
 	XStudioMany2ManyFieldMC7Xf             *Relation  `xmlrpc:"x_studio_many2many_field_MC7Xf,omptempty"`
-	XStudioMany2ManyFieldOgrsg             *Relation  `xmlrpc:"x_studio_many2many_field_Ogrsg,omptempty"`
 	XStudioMany2ManyFieldPbGXA             *Relation  `xmlrpc:"x_studio_many2many_field_PbGXA,omptempty"`
 	XStudioMany2ManyFieldT0UBA             *Relation  `xmlrpc:"x_studio_many2many_field_T0UBA,omptempty"`
+	XStudioMany2ManyFieldFroCV             *Relation  `xmlrpc:"x_studio_many2many_field_froCV,omptempty"`
 	XStudioMany2ManyFieldH9EBT             *Relation  `xmlrpc:"x_studio_many2many_field_h9EBT,omptempty"`
 	XStudioMany2ManyFieldKoBkM             *Relation  `xmlrpc:"x_studio_many2many_field_koBkM,omptempty"`
 	XStudioMany2ManyFieldVlIm5             *Relation  `xmlrpc:"x_studio_many2many_field_vlIm5,omptempty"`
 	XStudioMediaCondition                  *Selection `xmlrpc:"x_studio_media_condition,omptempty"`
 	XStudioMultilineNotes                  *String    `xmlrpc:"x_studio_multiline_notes,omptempty"`
 	XStudioNotes                           *String    `xmlrpc:"x_studio_notes,omptempty"`
+	XStudioNotes1                          *String    `xmlrpc:"x_studio_notes_1,omptempty"`
 	XStudioOne2ManyFieldMkcRR              *Relation  `xmlrpc:"x_studio_one2many_field_MkcRR,omptempty"`
 	XStudioProductFormat                   *Selection `xmlrpc:"x_studio_product_format,omptempty"`
 	XStudioRelease                         *Relation  `xmlrpc:"x_studio_release,omptempty"`
@@ -209,6 +227,7 @@ type ProductProduct struct {
 	XStudioSleeveCondition                 *Selection `xmlrpc:"x_studio_sleeve_condition,omptempty"`
 	XStudioStyles                          *Relation  `xmlrpc:"x_studio_styles,omptempty"`
 	XStudioTextFieldHpNtT                  *String    `xmlrpc:"x_studio_text_field_HpNtT,omptempty"`
+	XStudioTextFieldCt2Dp                  *String    `xmlrpc:"x_studio_text_field_ct2dp,omptempty"`
 	XStudioYearOfTheRelease                *String    `xmlrpc:"x_studio_year_of_the_release,omptempty"`
 	XStudioYearOfTheReleaseOfTheMaster     *String    `xmlrpc:"x_studio_year_of_the_release_of_the_master,omptempty"`
 	XStudioYearRelease                     *String    `xmlrpc:"x_studio_year_release,omptempty"`

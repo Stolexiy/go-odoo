@@ -6,15 +6,17 @@ import (
 
 // XCollection represents x_collection model.
 type XCollection struct {
-	LastUpdate             *Time     `xmlrpc:"__last_update,omptempty"`
-	CreateDate             *Time     `xmlrpc:"create_date,omptempty"`
-	CreateUid              *Many2One `xmlrpc:"create_uid,omptempty"`
-	DisplayName            *String   `xmlrpc:"display_name,omptempty"`
-	Id                     *Int      `xmlrpc:"id,omptempty"`
-	WriteDate              *Time     `xmlrpc:"write_date,omptempty"`
-	WriteUid               *Many2One `xmlrpc:"write_uid,omptempty"`
-	XName                  *String   `xmlrpc:"x_name,omptempty"`
-	XStudioDiscogsFolderId *Int      `xmlrpc:"x_studio_discogs_folder_id,omptempty"`
+	LastUpdate                      *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate                      *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid                       *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName                     *String   `xmlrpc:"display_name,omptempty"`
+	Id                              *Int      `xmlrpc:"id,omptempty"`
+	WriteDate                       *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid                        *Many2One `xmlrpc:"write_uid,omptempty"`
+	XName                           *String   `xmlrpc:"x_name,omptempty"`
+	XStudioDiscogsFolderId          *Int      `xmlrpc:"x_studio_discogs_folder_id,omptempty"`
+	XStudioNombreDeVinyles          *String   `xmlrpc:"x_studio_nombre_de_vinyles,omptempty"`
+	XStudioPrixDachatDeLaCollection *String   `xmlrpc:"x_studio_prix_dachat_de_la_collection,omptempty"`
 }
 
 // XCollections represents array of x_collection model.

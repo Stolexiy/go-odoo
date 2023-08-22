@@ -6,39 +6,16 @@ import (
 
 // XLabels represents x_labels model.
 type XLabels struct {
-	LastUpdate                  *Time      `xmlrpc:"__last_update,omptempty"`
-	ActivityDateDeadline        *Time      `xmlrpc:"activity_date_deadline,omptempty"`
-	ActivityExceptionDecoration *Selection `xmlrpc:"activity_exception_decoration,omptempty"`
-	ActivityExceptionIcon       *String    `xmlrpc:"activity_exception_icon,omptempty"`
-	ActivityIds                 *Relation  `xmlrpc:"activity_ids,omptempty"`
-	ActivityState               *Selection `xmlrpc:"activity_state,omptempty"`
-	ActivitySummary             *String    `xmlrpc:"activity_summary,omptempty"`
-	ActivityTypeIcon            *String    `xmlrpc:"activity_type_icon,omptempty"`
-	ActivityTypeId              *Many2One  `xmlrpc:"activity_type_id,omptempty"`
-	ActivityUserId              *Many2One  `xmlrpc:"activity_user_id,omptempty"`
-	CreateDate                  *Time      `xmlrpc:"create_date,omptempty"`
-	CreateUid                   *Many2One  `xmlrpc:"create_uid,omptempty"`
-	DisplayName                 *String    `xmlrpc:"display_name,omptempty"`
-	HasMessage                  *Bool      `xmlrpc:"has_message,omptempty"`
-	Id                          *Int       `xmlrpc:"id,omptempty"`
-	MessageAttachmentCount      *Int       `xmlrpc:"message_attachment_count,omptempty"`
-	MessageFollowerIds          *Relation  `xmlrpc:"message_follower_ids,omptempty"`
-	MessageHasError             *Bool      `xmlrpc:"message_has_error,omptempty"`
-	MessageHasErrorCounter      *Int       `xmlrpc:"message_has_error_counter,omptempty"`
-	MessageHasSmsError          *Bool      `xmlrpc:"message_has_sms_error,omptempty"`
-	MessageIds                  *Relation  `xmlrpc:"message_ids,omptempty"`
-	MessageIsFollower           *Bool      `xmlrpc:"message_is_follower,omptempty"`
-	MessageMainAttachmentId     *Many2One  `xmlrpc:"message_main_attachment_id,omptempty"`
-	MessageNeedaction           *Bool      `xmlrpc:"message_needaction,omptempty"`
-	MessageNeedactionCounter    *Int       `xmlrpc:"message_needaction_counter,omptempty"`
-	MessagePartnerIds           *Relation  `xmlrpc:"message_partner_ids,omptempty"`
-	MyActivityDateDeadline      *Time      `xmlrpc:"my_activity_date_deadline,omptempty"`
-	WebsiteMessageIds           *Relation  `xmlrpc:"website_message_ids,omptempty"`
-	WriteDate                   *Time      `xmlrpc:"write_date,omptempty"`
-	WriteUid                    *Many2One  `xmlrpc:"write_uid,omptempty"`
-	XName                       *String    `xmlrpc:"x_name,omptempty"`
-	XStudioDiscogsId            *Int       `xmlrpc:"x_studio_discogs_id,omptempty"`
-	XStudioReleases             *Relation  `xmlrpc:"x_studio_releases,omptempty"`
+	LastUpdate       *Time     `xmlrpc:"__last_update,omptempty"`
+	CreateDate       *Time     `xmlrpc:"create_date,omptempty"`
+	CreateUid        *Many2One `xmlrpc:"create_uid,omptempty"`
+	DisplayName      *String   `xmlrpc:"display_name,omptempty"`
+	Id               *Int      `xmlrpc:"id,omptempty"`
+	WriteDate        *Time     `xmlrpc:"write_date,omptempty"`
+	WriteUid         *Many2One `xmlrpc:"write_uid,omptempty"`
+	XName            *String   `xmlrpc:"x_name,omptempty"`
+	XStudioDiscogsId *Int      `xmlrpc:"x_studio_discogs_id,omptempty"`
+	XStudioReleases  *Relation `xmlrpc:"x_studio_releases,omptempty"`
 }
 
 // XLabelss represents array of x_labels model.
