@@ -75,6 +75,8 @@ type ProductTemplate struct {
 	OptionalProductIds                     *Relation  `xmlrpc:"optional_product_ids,omptempty"`
 	OutgoingQty                            *Float     `xmlrpc:"outgoing_qty,omptempty"`
 	PackagingIds                           *Relation  `xmlrpc:"packaging_ids,omptempty"`
+	PlanningEnabled                        *Bool      `xmlrpc:"planning_enabled,omptempty"`
+	PlanningRoleId                         *Many2One  `xmlrpc:"planning_role_id,omptempty"`
 	PosCategId                             *Many2One  `xmlrpc:"pos_categ_id,omptempty"`
 	PricelistItemCount                     *Int       `xmlrpc:"pricelist_item_count,omptempty"`
 	Priority                               *Selection `xmlrpc:"priority,omptempty"`

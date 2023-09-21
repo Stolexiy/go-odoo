@@ -97,6 +97,8 @@ type ProductProduct struct {
 	OutgoingQty                            *Float     `xmlrpc:"outgoing_qty,omptempty"`
 	PackagingIds                           *Relation  `xmlrpc:"packaging_ids,omptempty"`
 	PartnerRef                             *String    `xmlrpc:"partner_ref,omptempty"`
+	PlanningEnabled                        *Bool      `xmlrpc:"planning_enabled,omptempty"`
+	PlanningRoleId                         *Many2One  `xmlrpc:"planning_role_id,omptempty"`
 	PosCategId                             *Many2One  `xmlrpc:"pos_categ_id,omptempty"`
 	PriceExtra                             *Float     `xmlrpc:"price_extra,omptempty"`
 	PricelistItemCount                     *Int       `xmlrpc:"pricelist_item_count,omptempty"`
