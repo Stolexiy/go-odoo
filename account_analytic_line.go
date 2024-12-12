@@ -2,41 +2,79 @@ package odoo
 
 // AccountAnalyticLine represents account.analytic.line model.
 type AccountAnalyticLine struct {
-	LastUpdate             *Time      `xmlrpc:"__last_update,omitempty"`
-	AccountId              *Many2One  `xmlrpc:"account_id,omitempty"`
-	Amount                 *Float     `xmlrpc:"amount,omitempty"`
-	AmountCurrency         *Float     `xmlrpc:"amount_currency,omitempty"`
-	AnalyticAmountCurrency *Float     `xmlrpc:"analytic_amount_currency,omitempty"`
-	Code                   *String    `xmlrpc:"code,omitempty"`
-	CompanyCurrencyId      *Many2One  `xmlrpc:"company_currency_id,omitempty"`
-	CompanyId              *Many2One  `xmlrpc:"company_id,omitempty"`
-	CreateDate             *Time      `xmlrpc:"create_date,omitempty"`
-	CreateUid              *Many2One  `xmlrpc:"create_uid,omitempty"`
-	CurrencyId             *Many2One  `xmlrpc:"currency_id,omitempty"`
-	Date                   *Time      `xmlrpc:"date,omitempty"`
-	DepartmentId           *Many2One  `xmlrpc:"department_id,omitempty"`
-	DisplayName            *String    `xmlrpc:"display_name,omitempty"`
-	EmployeeId             *Many2One  `xmlrpc:"employee_id,omitempty"`
-	GeneralAccountId       *Many2One  `xmlrpc:"general_account_id,omitempty"`
-	HolidayId              *Many2One  `xmlrpc:"holiday_id,omitempty"`
-	Id                     *Int       `xmlrpc:"id,omitempty"`
-	MoveId                 *Many2One  `xmlrpc:"move_id,omitempty"`
-	Name                   *String    `xmlrpc:"name,omitempty"`
-	PartnerId              *Many2One  `xmlrpc:"partner_id,omitempty"`
-	ProductId              *Many2One  `xmlrpc:"product_id,omitempty"`
-	ProductUomId           *Many2One  `xmlrpc:"product_uom_id,omitempty"`
-	ProjectId              *Many2One  `xmlrpc:"project_id,omitempty"`
-	Ref                    *String    `xmlrpc:"ref,omitempty"`
-	SoLine                 *Many2One  `xmlrpc:"so_line,omitempty"`
-	TagIds                 *Relation  `xmlrpc:"tag_ids,omitempty"`
-	TaskId                 *Many2One  `xmlrpc:"task_id,omitempty"`
-	TimesheetInvoiceId     *Many2One  `xmlrpc:"timesheet_invoice_id,omitempty"`
-	TimesheetInvoiceType   *Selection `xmlrpc:"timesheet_invoice_type,omitempty"`
-	TimesheetRevenue       *Float     `xmlrpc:"timesheet_revenue,omitempty"`
-	UnitAmount             *Float     `xmlrpc:"unit_amount,omitempty"`
-	UserId                 *Many2One  `xmlrpc:"user_id,omitempty"`
-	WriteDate              *Time      `xmlrpc:"write_date,omitempty"`
-	WriteUid               *Many2One  `xmlrpc:"write_uid,omitempty"`
+	AccountId                *Many2One  `xmlrpc:"account_id,omitempty"`
+	AllowBillable            *Bool      `xmlrpc:"allow_billable,omitempty"`
+	Amount                   *Float     `xmlrpc:"amount,omitempty"`
+	AutoAccountId            *Many2One  `xmlrpc:"auto_account_id,omitempty"`
+	Category                 *Selection `xmlrpc:"category,omitempty"`
+	Code                     *String    `xmlrpc:"code,omitempty"`
+	CommercialPartnerId      *Many2One  `xmlrpc:"commercial_partner_id,omitempty"`
+	CompanyId                *Many2One  `xmlrpc:"company_id,omitempty"`
+	CreateDate               *Time      `xmlrpc:"create_date,omitempty"`
+	CreateUid                *Many2One  `xmlrpc:"create_uid,omitempty"`
+	CurrencyId               *Many2One  `xmlrpc:"currency_id,omitempty"`
+	Date                     *Time      `xmlrpc:"date,omitempty"`
+	DepartmentId             *Many2One  `xmlrpc:"department_id,omitempty"`
+	DisplayName              *String    `xmlrpc:"display_name,omitempty"`
+	DisplayTimer             *Bool      `xmlrpc:"display_timer,omitempty"`
+	DisplayTimerPause        *Bool      `xmlrpc:"display_timer_pause,omitempty"`
+	DisplayTimerResume       *Bool      `xmlrpc:"display_timer_resume,omitempty"`
+	DisplayTimerStartPrimary *Bool      `xmlrpc:"display_timer_start_primary,omitempty"`
+	DisplayTimerStop         *Bool      `xmlrpc:"display_timer_stop,omitempty"`
+	DurationUnitAmount       *Float     `xmlrpc:"duration_unit_amount,omitempty"`
+	EmployeeId               *Many2One  `xmlrpc:"employee_id,omitempty"`
+	EncodingUomId            *Many2One  `xmlrpc:"encoding_uom_id,omitempty"`
+	GeneralAccountId         *Many2One  `xmlrpc:"general_account_id,omitempty"`
+	Id                       *Int       `xmlrpc:"id,omitempty"`
+	IsSoLineEdited           *Bool      `xmlrpc:"is_so_line_edited,omitempty"`
+	IsTimerRunning           *Bool      `xmlrpc:"is_timer_running,omitempty"`
+	IsTimesheet              *Bool      `xmlrpc:"is_timesheet,omitempty"`
+	JobTitle                 *String    `xmlrpc:"job_title,omitempty"`
+	JournalId                *Many2One  `xmlrpc:"journal_id,omitempty"`
+	ManagerId                *Many2One  `xmlrpc:"manager_id,omitempty"`
+	MessagePartnerIds        *Relation  `xmlrpc:"message_partner_ids,omitempty"`
+	MilestoneId              *Many2One  `xmlrpc:"milestone_id,omitempty"`
+	MoveLineId               *Many2One  `xmlrpc:"move_line_id,omitempty"`
+	Name                     *String    `xmlrpc:"name,omitempty"`
+	OrderId                  *Many2One  `xmlrpc:"order_id,omitempty"`
+	ParentTaskId             *Many2One  `xmlrpc:"parent_task_id,omitempty"`
+	PartnerId                *Many2One  `xmlrpc:"partner_id,omitempty"`
+	ProductId                *Many2One  `xmlrpc:"product_id,omitempty"`
+	ProductUomCategoryId     *Many2One  `xmlrpc:"product_uom_category_id,omitempty"`
+	ProductUomId             *Many2One  `xmlrpc:"product_uom_id,omitempty"`
+	ProjectId                *Many2One  `xmlrpc:"project_id,omitempty"`
+	ReadonlyTimesheet        *Bool      `xmlrpc:"readonly_timesheet,omitempty"`
+	Ref                      *String    `xmlrpc:"ref,omitempty"`
+	SaleOrderState           *Selection `xmlrpc:"sale_order_state,omitempty"`
+	SlotId                   *Many2One  `xmlrpc:"slot_id,omitempty"`
+	SoLine                   *Many2One  `xmlrpc:"so_line,omitempty"`
+	TaskId                   *Many2One  `xmlrpc:"task_id,omitempty"`
+	TimerPause               *Time      `xmlrpc:"timer_pause,omitempty"`
+	TimerStart               *Time      `xmlrpc:"timer_start,omitempty"`
+	TimesheetInvoiceId       *Many2One  `xmlrpc:"timesheet_invoice_id,omitempty"`
+	TimesheetInvoiceType     *Selection `xmlrpc:"timesheet_invoice_type,omitempty"`
+	UnitAmount               *Float     `xmlrpc:"unit_amount,omitempty"`
+	UnitAmountValidate       *Float     `xmlrpc:"unit_amount_validate,omitempty"`
+	UserCanValidate          *Bool      `xmlrpc:"user_can_validate,omitempty"`
+	UserId                   *Many2One  `xmlrpc:"user_id,omitempty"`
+	UserTimerId              *Relation  `xmlrpc:"user_timer_id,omitempty"`
+	Validated                *Bool      `xmlrpc:"validated,omitempty"`
+	ValidatedStatus          *Selection `xmlrpc:"validated_status,omitempty"`
+	WriteDate                *Time      `xmlrpc:"write_date,omitempty"`
+	WriteUid                 *Many2One  `xmlrpc:"write_uid,omitempty"`
+	XPlan155Id               *Many2One  `xmlrpc:"x_plan155_id,omitempty"`
+	XPlan159Id               *Many2One  `xmlrpc:"x_plan159_id,omitempty"`
+	XPlan161Id               *Many2One  `xmlrpc:"x_plan161_id,omitempty"`
+	XPlan16Id                *Many2One  `xmlrpc:"x_plan16_id,omitempty"`
+	XPlan17Id                *Many2One  `xmlrpc:"x_plan17_id,omitempty"`
+	XPlan18Id                *Many2One  `xmlrpc:"x_plan18_id,omitempty"`
+	XPlan19Id                *Many2One  `xmlrpc:"x_plan19_id,omitempty"`
+	XPlan24Id                *Many2One  `xmlrpc:"x_plan24_id,omitempty"`
+	XPlan26Id                *Many2One  `xmlrpc:"x_plan26_id,omitempty"`
+	XStudioCommentaire       *String    `xmlrpc:"x_studio_commentaire,omitempty"`
+	XStudioTiquettes         *Relation  `xmlrpc:"x_studio_tiquettes,omitempty"`
+	XStudioTiquettes1        *Relation  `xmlrpc:"x_studio_tiquettes_1,omitempty"`
+	XStudioTiquettes2        *Relation  `xmlrpc:"x_studio_tiquettes_2,omitempty"`
 }
 
 // AccountAnalyticLines represents array of account.analytic.line model.
@@ -62,7 +100,7 @@ func (c *Client) CreateAccountAnalyticLine(aal *AccountAnalyticLine) (int64, err
 	return ids[0], nil
 }
 
-// CreateAccountAnalyticLines creates a new account.analytic.line model and returns its id.
+// CreateAccountAnalyticLine creates a new account.analytic.line model and returns its id.
 func (c *Client) CreateAccountAnalyticLines(aals []*AccountAnalyticLine) ([]int64, error) {
 	var vv []interface{}
 	for _, v := range aals {
