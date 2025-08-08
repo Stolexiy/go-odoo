@@ -48,8 +48,6 @@ type SaleOrder struct {
 	DuplicatedOrderIds           *Relation   `xmlrpc:"duplicated_order_ids,omitempty"`
 	EffectiveDate                *Time       `xmlrpc:"effective_date,omitempty"`
 	ExpectedDate                 *Time       `xmlrpc:"expected_date,omitempty"`
-	ExpenseCount                 *Int        `xmlrpc:"expense_count,omitempty"`
-	ExpenseIds                   *Relation   `xmlrpc:"expense_ids,omitempty"`
 	FiscalPositionId             *Many2One   `xmlrpc:"fiscal_position_id,omitempty"`
 	HasActivePricelist           *Bool       `xmlrpc:"has_active_pricelist,omitempty"`
 	HasArchivedProducts          *Bool       `xmlrpc:"has_archived_products,omitempty"`

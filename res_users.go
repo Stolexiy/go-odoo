@@ -55,6 +55,7 @@ type ResUsers struct {
 	CompanyIds                          *Relation  `xmlrpc:"company_ids,omitempty"`
 	CompanyName                         *String    `xmlrpc:"company_name,omitempty"`
 	CompanyRegistry                     *String    `xmlrpc:"company_registry,omitempty"`
+	CompanyRegistryLabel                *String    `xmlrpc:"company_registry_label,omitempty"`
 	CompanyType                         *Selection `xmlrpc:"company_type,omitempty"`
 	CompleteName                        *String    `xmlrpc:"complete_name,omitempty"`
 	ContactAddress                      *String    `xmlrpc:"contact_address,omitempty"`
@@ -87,6 +88,7 @@ type ResUsers struct {
 	DistanceHomeWorkUnit                *Selection `xmlrpc:"distance_home_work_unit,omitempty"`
 	DocumentCount                       *Int       `xmlrpc:"document_count,omitempty"`
 	DocumentIds                         *Relation  `xmlrpc:"document_ids,omitempty"`
+	DuplicateBankPartnerIds             *Relation  `xmlrpc:"duplicate_bank_partner_ids,omitempty"`
 	DuplicatedBankAccountPartnersCount  *Int       `xmlrpc:"duplicated_bank_account_partners_count,omitempty"`
 	Email                               *String    `xmlrpc:"email,omitempty"`
 	EmailFormatted                      *String    `xmlrpc:"email_formatted,omitempty"`
@@ -103,7 +105,6 @@ type ResUsers struct {
 	EmployeeResourceCalendarId          *Many2One  `xmlrpc:"employee_resource_calendar_id,omitempty"`
 	EmployeeType                        *Selection `xmlrpc:"employee_type,omitempty"`
 	EmployeesCount                      *Int       `xmlrpc:"employees_count,omitempty"`
-	ExpenseManagerId                    *Many2One  `xmlrpc:"expense_manager_id,omitempty"`
 	FiscalCountryCodes                  *String    `xmlrpc:"fiscal_country_codes,omitempty"`
 	FollowupLineId                      *Many2One  `xmlrpc:"followup_line_id,omitempty"`
 	FollowupNextActionDate              *Time      `xmlrpc:"followup_next_action_date,omitempty"`
@@ -115,6 +116,7 @@ type ResUsers struct {
 	GroupsCount                         *Int       `xmlrpc:"groups_count,omitempty"`
 	GroupsId                            *Relation  `xmlrpc:"groups_id,omitempty"`
 	HasMessage                          *Bool      `xmlrpc:"has_message,omitempty"`
+	HasMoves                            *Bool      `xmlrpc:"has_moves,omitempty"`
 	HrPresenceState                     *Selection `xmlrpc:"hr_presence_state,omitempty"`
 	Id                                  *Int       `xmlrpc:"id,omitempty"`
 	IdentificationId                    *String    `xmlrpc:"identification_id,omitempty"`
@@ -185,6 +187,7 @@ type ResUsers struct {
 	OpportunityIds                      *Relation  `xmlrpc:"opportunity_ids,omitempty"`
 	ParentId                            *Many2One  `xmlrpc:"parent_id,omitempty"`
 	ParentName                          *String    `xmlrpc:"parent_name,omitempty"`
+	PartnerCompanyRegistryPlaceholder   *String    `xmlrpc:"partner_company_registry_placeholder,omitempty"`
 	PartnerGid                          *Int       `xmlrpc:"partner_gid,omitempty"`
 	PartnerId                           *Many2One  `xmlrpc:"partner_id,omitempty"`
 	PartnerLatitude                     *Float     `xmlrpc:"partner_latitude,omitempty"`
@@ -257,7 +260,13 @@ type ResUsers struct {
 	SeoName                             *String    `xmlrpc:"seo_name,omitempty"`
 	Share                               *Bool      `xmlrpc:"share,omitempty"`
 	ShowCreditLimit                     *Bool      `xmlrpc:"show_credit_limit,omitempty"`
+	SignInitials                        *String    `xmlrpc:"sign_initials,omitempty"`
+	SignInitialsFrame                   *String    `xmlrpc:"sign_initials_frame,omitempty"`
+	SignRequestCount                    *Int       `xmlrpc:"sign_request_count,omitempty"`
+	SignSignature                       *String    `xmlrpc:"sign_signature,omitempty"`
+	SignSignatureFrame                  *String    `xmlrpc:"sign_signature_frame,omitempty"`
 	Signature                           *String    `xmlrpc:"signature,omitempty"`
+	SignatureCount                      *Int       `xmlrpc:"signature_count,omitempty"`
 	SignupType                          *String    `xmlrpc:"signup_type,omitempty"`
 	Siret                               *String    `xmlrpc:"siret,omitempty"`
 	SpecificPropertyProductPricelist    *Many2One  `xmlrpc:"specific_property_product_pricelist,omitempty"`
@@ -280,6 +289,8 @@ type ResUsers struct {
 	TaskIds                             *Relation  `xmlrpc:"task_ids,omitempty"`
 	TimesheetManagerId                  *Many2One  `xmlrpc:"timesheet_manager_id,omitempty"`
 	Title                               *Many2One  `xmlrpc:"title,omitempty"`
+	TotalAllDue                         *Float     `xmlrpc:"total_all_due,omitempty"`
+	TotalAllOverdue                     *Float     `xmlrpc:"total_all_overdue,omitempty"`
 	TotalDue                            *Float     `xmlrpc:"total_due,omitempty"`
 	TotalInvoiced                       *Float     `xmlrpc:"total_invoiced,omitempty"`
 	TotalOverdue                        *Float     `xmlrpc:"total_overdue,omitempty"`
@@ -300,6 +311,7 @@ type ResUsers struct {
 	UserId                              *Many2One  `xmlrpc:"user_id,omitempty"`
 	UserIds                             *Relation  `xmlrpc:"user_ids,omitempty"`
 	Vat                                 *String    `xmlrpc:"vat,omitempty"`
+	VatLabel                            *String    `xmlrpc:"vat_label,omitempty"`
 	Vehicle                             *String    `xmlrpc:"vehicle,omitempty"`
 	ViesValid                           *Bool      `xmlrpc:"vies_valid,omitempty"`
 	ViesVatToCheck                      *String    `xmlrpc:"vies_vat_to_check,omitempty"`

@@ -2,16 +2,15 @@ package odoo
 
 // AccountMoveSendBatchWizard represents account.move.send.batch.wizard model.
 type AccountMoveSendBatchWizard struct {
-	Alerts           interface{} `xmlrpc:"alerts,omitempty"`
-	CreateDate       *Time       `xmlrpc:"create_date,omitempty"`
-	CreateUid        *Many2One   `xmlrpc:"create_uid,omitempty"`
-	DisplayName      *String     `xmlrpc:"display_name,omitempty"`
-	Id               *Int        `xmlrpc:"id,omitempty"`
-	MoveIds          *Relation   `xmlrpc:"move_ids,omitempty"`
-	SendByPostStamps *Int        `xmlrpc:"send_by_post_stamps,omitempty"`
-	SummaryData      interface{} `xmlrpc:"summary_data,omitempty"`
-	WriteDate        *Time       `xmlrpc:"write_date,omitempty"`
-	WriteUid         *Many2One   `xmlrpc:"write_uid,omitempty"`
+	Alerts      interface{} `xmlrpc:"alerts,omitempty"`
+	CreateDate  *Time       `xmlrpc:"create_date,omitempty"`
+	CreateUid   *Many2One   `xmlrpc:"create_uid,omitempty"`
+	DisplayName *String     `xmlrpc:"display_name,omitempty"`
+	Id          *Int        `xmlrpc:"id,omitempty"`
+	MoveIds     *Relation   `xmlrpc:"move_ids,omitempty"`
+	SummaryData interface{} `xmlrpc:"summary_data,omitempty"`
+	WriteDate   *Time       `xmlrpc:"write_date,omitempty"`
+	WriteUid    *Many2One   `xmlrpc:"write_uid,omitempty"`
 }
 
 // AccountMoveSendBatchWizards represents array of account.move.send.batch.wizard model.

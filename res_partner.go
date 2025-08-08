@@ -39,6 +39,7 @@ type ResPartner struct {
 	CompanyId                           *Many2One  `xmlrpc:"company_id,omitempty"`
 	CompanyName                         *String    `xmlrpc:"company_name,omitempty"`
 	CompanyRegistry                     *String    `xmlrpc:"company_registry,omitempty"`
+	CompanyRegistryLabel                *String    `xmlrpc:"company_registry_label,omitempty"`
 	CompanyType                         *Selection `xmlrpc:"company_type,omitempty"`
 	CompleteName                        *String    `xmlrpc:"complete_name,omitempty"`
 	ContactAddress                      *String    `xmlrpc:"contact_address,omitempty"`
@@ -61,6 +62,7 @@ type ResPartner struct {
 	DisplayInvoiceTemplatePdfReportId   *Bool      `xmlrpc:"display_invoice_template_pdf_report_id,omitempty"`
 	DisplayName                         *String    `xmlrpc:"display_name,omitempty"`
 	DocumentCount                       *Int       `xmlrpc:"document_count,omitempty"`
+	DuplicateBankPartnerIds             *Relation  `xmlrpc:"duplicate_bank_partner_ids,omitempty"`
 	DuplicatedBankAccountPartnersCount  *Int       `xmlrpc:"duplicated_bank_account_partners_count,omitempty"`
 	Email                               *String    `xmlrpc:"email,omitempty"`
 	EmailFormatted                      *String    `xmlrpc:"email_formatted,omitempty"`
@@ -76,6 +78,7 @@ type ResPartner struct {
 	FollowupStatus                      *Selection `xmlrpc:"followup_status,omitempty"`
 	Function                            *String    `xmlrpc:"function,omitempty"`
 	HasMessage                          *Bool      `xmlrpc:"has_message,omitempty"`
+	HasMoves                            *Bool      `xmlrpc:"has_moves,omitempty"`
 	Id                                  *Int       `xmlrpc:"id,omitempty"`
 	IgnoreAbnormalInvoiceAmount         *Bool      `xmlrpc:"ignore_abnormal_invoice_amount,omitempty"`
 	IgnoreAbnormalInvoiceDate           *Bool      `xmlrpc:"ignore_abnormal_invoice_date,omitempty"`
@@ -130,6 +133,7 @@ type ResPartner struct {
 	OpportunityIds                      *Relation  `xmlrpc:"opportunity_ids,omitempty"`
 	ParentId                            *Many2One  `xmlrpc:"parent_id,omitempty"`
 	ParentName                          *String    `xmlrpc:"parent_name,omitempty"`
+	PartnerCompanyRegistryPlaceholder   *String    `xmlrpc:"partner_company_registry_placeholder,omitempty"`
 	PartnerGid                          *Int       `xmlrpc:"partner_gid,omitempty"`
 	PartnerLatitude                     *Float     `xmlrpc:"partner_latitude,omitempty"`
 	PartnerLongitude                    *Float     `xmlrpc:"partner_longitude,omitempty"`
@@ -179,6 +183,7 @@ type ResPartner struct {
 	Self                                *Many2One  `xmlrpc:"self,omitempty"`
 	SeoName                             *String    `xmlrpc:"seo_name,omitempty"`
 	ShowCreditLimit                     *Bool      `xmlrpc:"show_credit_limit,omitempty"`
+	SignatureCount                      *Int       `xmlrpc:"signature_count,omitempty"`
 	SignupType                          *String    `xmlrpc:"signup_type,omitempty"`
 	Siret                               *String    `xmlrpc:"siret,omitempty"`
 	SpecificPropertyProductPricelist    *Many2One  `xmlrpc:"specific_property_product_pricelist,omitempty"`
@@ -191,6 +196,8 @@ type ResPartner struct {
 	TaskCount                           *Int       `xmlrpc:"task_count,omitempty"`
 	TaskIds                             *Relation  `xmlrpc:"task_ids,omitempty"`
 	Title                               *Many2One  `xmlrpc:"title,omitempty"`
+	TotalAllDue                         *Float     `xmlrpc:"total_all_due,omitempty"`
+	TotalAllOverdue                     *Float     `xmlrpc:"total_all_overdue,omitempty"`
 	TotalDue                            *Float     `xmlrpc:"total_due,omitempty"`
 	TotalInvoiced                       *Float     `xmlrpc:"total_invoiced,omitempty"`
 	TotalOverdue                        *Float     `xmlrpc:"total_overdue,omitempty"`
@@ -206,6 +213,7 @@ type ResPartner struct {
 	UserId                              *Many2One  `xmlrpc:"user_id,omitempty"`
 	UserIds                             *Relation  `xmlrpc:"user_ids,omitempty"`
 	Vat                                 *String    `xmlrpc:"vat,omitempty"`
+	VatLabel                            *String    `xmlrpc:"vat_label,omitempty"`
 	ViesValid                           *Bool      `xmlrpc:"vies_valid,omitempty"`
 	ViesVatToCheck                      *String    `xmlrpc:"vies_vat_to_check,omitempty"`
 	VisitorIds                          *Relation  `xmlrpc:"visitor_ids,omitempty"`

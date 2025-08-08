@@ -48,6 +48,7 @@ type AccountBatchPayment struct {
 	Name                        *String    `xmlrpc:"name,omitempty"`
 	PaymentIdentifier           *String    `xmlrpc:"payment_identifier,omitempty"`
 	PaymentIds                  *Relation  `xmlrpc:"payment_ids,omitempty"`
+	PaymentIdsDomain            *String    `xmlrpc:"payment_ids_domain,omitempty"`
 	PaymentMethodCode           *String    `xmlrpc:"payment_method_code,omitempty"`
 	PaymentMethodId             *Many2One  `xmlrpc:"payment_method_id,omitempty"`
 	PaymentOnlineStatus         *Selection `xmlrpc:"payment_online_status,omitempty"`

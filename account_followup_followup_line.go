@@ -19,7 +19,6 @@ type AccountFollowupFollowupLine struct {
 	MailTemplateId                 *Many2One  `xmlrpc:"mail_template_id,omitempty"`
 	Name                           *String    `xmlrpc:"name,omitempty"`
 	SendEmail                      *Bool      `xmlrpc:"send_email,omitempty"`
-	SendLetter                     *Bool      `xmlrpc:"send_letter,omitempty"`
 	SendSms                        *Bool      `xmlrpc:"send_sms,omitempty"`
 	SmsTemplateId                  *Many2One  `xmlrpc:"sms_template_id,omitempty"`
 	WriteDate                      *Time      `xmlrpc:"write_date,omitempty"`

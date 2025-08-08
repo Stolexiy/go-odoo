@@ -46,6 +46,7 @@ type BankRecWidgetLine struct {
 	SourceBatchPaymentName         *String     `xmlrpc:"source_batch_payment_name,omitempty"`
 	SourceCredit                   *Float      `xmlrpc:"source_credit,omitempty"`
 	SourceDebit                    *Float      `xmlrpc:"source_debit,omitempty"`
+	SourceRate                     *Float      `xmlrpc:"source_rate,omitempty"`
 	SuggestionAmountCurrency       *Float      `xmlrpc:"suggestion_amount_currency,omitempty"`
 	SuggestionBalance              *Float      `xmlrpc:"suggestion_balance,omitempty"`
 	SuggestionHtml                 *String     `xmlrpc:"suggestion_html,omitempty"`

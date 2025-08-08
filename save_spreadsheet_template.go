@@ -6,6 +6,7 @@ type SaveSpreadsheetTemplate struct {
 	CreateUid              *Many2One `xmlrpc:"create_uid,omitempty"`
 	CurrentRevisionUuid    *String   `xmlrpc:"current_revision_uuid,omitempty"`
 	DisplayName            *String   `xmlrpc:"display_name,omitempty"`
+	DisplayThumbnail       *String   `xmlrpc:"display_thumbnail,omitempty"`
 	Id                     *Int      `xmlrpc:"id,omitempty"`
 	SpreadsheetBinaryData  *String   `xmlrpc:"spreadsheet_binary_data,omitempty"`
 	SpreadsheetData        *String   `xmlrpc:"spreadsheet_data,omitempty"`

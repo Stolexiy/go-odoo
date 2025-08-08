@@ -62,8 +62,6 @@ type HrEmployee struct {
 	EmployeeProperties          interface{} `xmlrpc:"employee_properties,omitempty"`
 	EmployeeToken               *String     `xmlrpc:"employee_token,omitempty"`
 	EmployeeType                *Selection  `xmlrpc:"employee_type,omitempty"`
-	ExpenseManagerId            *Many2One   `xmlrpc:"expense_manager_id,omitempty"`
-	FilterForExpense            *Bool       `xmlrpc:"filter_for_expense,omitempty"`
 	FirstContractDate           *Time       `xmlrpc:"first_contract_date,omitempty"`
 	Gender                      *Selection  `xmlrpc:"gender,omitempty"`
 	HasMessage                  *Bool       `xmlrpc:"has_message,omitempty"`
@@ -134,6 +132,8 @@ type HrEmployee struct {
 	Share                       *Bool       `xmlrpc:"share,omitempty"`
 	ShowBillableTimeTarget      *Bool       `xmlrpc:"show_billable_time_target,omitempty"`
 	ShowHrIconDisplay           *Bool       `xmlrpc:"show_hr_icon_display,omitempty"`
+	SignRequestCount            *Int        `xmlrpc:"sign_request_count,omitempty"`
+	SignRequestIds              *Relation   `xmlrpc:"sign_request_ids,omitempty"`
 	Sinid                       *String     `xmlrpc:"sinid,omitempty"`
 	SpouseBirthdate             *Time       `xmlrpc:"spouse_birthdate,omitempty"`
 	SpouseCompleteName          *String     `xmlrpc:"spouse_complete_name,omitempty"`

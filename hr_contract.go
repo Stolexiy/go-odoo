@@ -51,6 +51,8 @@ type HrContract struct {
 	PermitNo                    *String    `xmlrpc:"permit_no,omitempty"`
 	RatingIds                   *Relation  `xmlrpc:"rating_ids,omitempty"`
 	ResourceCalendarId          *Many2One  `xmlrpc:"resource_calendar_id,omitempty"`
+	SignRequestCount            *Int       `xmlrpc:"sign_request_count,omitempty"`
+	SignRequestIds              *Relation  `xmlrpc:"sign_request_ids,omitempty"`
 	State                       *Selection `xmlrpc:"state,omitempty"`
 	StructureTypeId             *Many2One  `xmlrpc:"structure_type_id,omitempty"`
 	TrialDateEnd                *Time      `xmlrpc:"trial_date_end,omitempty"`

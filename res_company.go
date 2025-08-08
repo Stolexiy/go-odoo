@@ -57,8 +57,8 @@ type ResCompany struct {
 	City                                        *String     `xmlrpc:"city,omitempty"`
 	Color                                       *Int        `xmlrpc:"color,omitempty"`
 	CompanyDetails                              *String     `xmlrpc:"company_details,omitempty"`
-	CompanyExpenseAllowedPaymentMethodLineIds   *Relation   `xmlrpc:"company_expense_allowed_payment_method_line_ids,omitempty"`
 	CompanyRegistry                             *String     `xmlrpc:"company_registry,omitempty"`
+	CompanyRegistryPlaceholder                  *String     `xmlrpc:"company_registry_placeholder,omitempty"`
 	CompanyVatPlaceholder                       *String     `xmlrpc:"company_vat_placeholder,omitempty"`
 	ContractExpirationNoticePeriod              *Int        `xmlrpc:"contract_expiration_notice_period,omitempty"`
 	CountryCode                                 *String     `xmlrpc:"country_code,omitempty"`
@@ -89,6 +89,7 @@ type ResCompany struct {
 	DocumentsHrFolder                           *Many2One   `xmlrpc:"documents_hr_folder,omitempty"`
 	DocumentsHrSettings                         *Bool       `xmlrpc:"documents_hr_settings,omitempty"`
 	DocumentsProductSettings                    *Bool       `xmlrpc:"documents_product_settings,omitempty"`
+	DocumentsSignFolderId                       *Many2One   `xmlrpc:"documents_sign_folder_id,omitempty"`
 	Email                                       *String     `xmlrpc:"email,omitempty"`
 	EmailFormatted                              *String     `xmlrpc:"email_formatted,omitempty"`
 	EmailPrimaryColor                           *String     `xmlrpc:"email_primary_color,omitempty"`
@@ -97,8 +98,6 @@ type ResCompany struct {
 	ExpectsChartOfAccounts                      *Bool       `xmlrpc:"expects_chart_of_accounts,omitempty"`
 	ExpenseAccrualAccountId                     *Many2One   `xmlrpc:"expense_accrual_account_id,omitempty"`
 	ExpenseCurrencyExchangeAccountId            *Many2One   `xmlrpc:"expense_currency_exchange_account_id,omitempty"`
-	ExpenseJournalId                            *Many2One   `xmlrpc:"expense_journal_id,omitempty"`
-	ExpenseOutstandingAccountId                 *Many2One   `xmlrpc:"expense_outstanding_account_id,omitempty"`
 	ExternalReportLayoutId                      *Many2One   `xmlrpc:"external_report_layout_id,omitempty"`
 	ExtractBankStatementDigitalizationMode      *Selection  `xmlrpc:"extract_bank_statement_digitalization_mode,omitempty"`
 	ExtractInInvoiceDigitalizationMode          *Selection  `xmlrpc:"extract_in_invoice_digitalization_mode,omitempty"`
@@ -210,6 +209,9 @@ type ResCompany struct {
 	SecurityLead                                *Float      `xmlrpc:"security_lead,omitempty"`
 	Sequence                                    *Int        `xmlrpc:"sequence,omitempty"`
 	SignInvoice                                 *Bool       `xmlrpc:"sign_invoice,omitempty"`
+	SignTerms                                   *String     `xmlrpc:"sign_terms,omitempty"`
+	SignTermsHtml                               *String     `xmlrpc:"sign_terms_html,omitempty"`
+	SignTermsType                               *Selection  `xmlrpc:"sign_terms_type,omitempty"`
 	SigningUser                                 *Many2One   `xmlrpc:"signing_user,omitempty"`
 	Siret                                       *String     `xmlrpc:"siret,omitempty"`
 	SnailmailColor                              *Bool       `xmlrpc:"snailmail_color,omitempty"`

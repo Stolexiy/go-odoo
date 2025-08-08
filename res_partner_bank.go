@@ -26,6 +26,7 @@ type ResPartnerBank struct {
 	CreateUid                       *Many2One  `xmlrpc:"create_uid,omitempty"`
 	CurrencyId                      *Many2One  `xmlrpc:"currency_id,omitempty"`
 	DisplayName                     *String    `xmlrpc:"display_name,omitempty"`
+	DuplicateBankPartnerIds         *Relation  `xmlrpc:"duplicate_bank_partner_ids,omitempty"`
 	HasIbanWarning                  *Bool      `xmlrpc:"has_iban_warning,omitempty"`
 	HasMessage                      *Bool      `xmlrpc:"has_message,omitempty"`
 	HasMoneyTransferWarning         *Bool      `xmlrpc:"has_money_transfer_warning,omitempty"`

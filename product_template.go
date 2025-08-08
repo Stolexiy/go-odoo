@@ -17,7 +17,6 @@ type ProductTemplate struct {
 	AttributeLineIds                       *Relation   `xmlrpc:"attribute_line_ids,omitempty"`
 	AvailableInPos                         *Bool       `xmlrpc:"available_in_pos,omitempty"`
 	Barcode                                *String     `xmlrpc:"barcode,omitempty"`
-	CanBeExpensed                          *Bool       `xmlrpc:"can_be_expensed,omitempty"`
 	CanImage1024BeZoomed                   *Bool       `xmlrpc:"can_image_1024_be_zoomed,omitempty"`
 	CategId                                *Many2One   `xmlrpc:"categ_id,omitempty"`
 	Color                                  *Int        `xmlrpc:"color,omitempty"`
@@ -37,7 +36,6 @@ type ProductTemplate struct {
 	DescriptionSale                        *String     `xmlrpc:"description_sale,omitempty"`
 	DisplayName                            *String     `xmlrpc:"display_name,omitempty"`
 	ExpensePolicy                          *Selection  `xmlrpc:"expense_policy,omitempty"`
-	ExpensePolicyTooltip                   *String     `xmlrpc:"expense_policy_tooltip,omitempty"`
 	FiscalCountryCodes                     *String     `xmlrpc:"fiscal_country_codes,omitempty"`
 	HasAvailableRouteIds                   *Bool       `xmlrpc:"has_available_route_ids,omitempty"`
 	HasConfigurableAttributes              *Bool       `xmlrpc:"has_configurable_attributes,omitempty"`
@@ -49,6 +47,7 @@ type ProductTemplate struct {
 	Image256                               *String     `xmlrpc:"image_256,omitempty"`
 	Image512                               *String     `xmlrpc:"image_512,omitempty"`
 	IncomingQty                            *Float      `xmlrpc:"incoming_qty,omitempty"`
+	IntrastatCodeDomain                    *String     `xmlrpc:"intrastat_code_domain,omitempty"`
 	IntrastatCodeId                        *Many2One   `xmlrpc:"intrastat_code_id,omitempty"`
 	IntrastatOriginCountryId               *Many2One   `xmlrpc:"intrastat_origin_country_id,omitempty"`
 	IntrastatSupplementaryUnit             *Selection  `xmlrpc:"intrastat_supplementary_unit,omitempty"`
@@ -136,6 +135,7 @@ type ProductTemplate struct {
 	UomId                                  *Many2One   `xmlrpc:"uom_id,omitempty"`
 	UomName                                *String     `xmlrpc:"uom_name,omitempty"`
 	UomPoId                                *Many2One   `xmlrpc:"uom_po_id,omitempty"`
+	ValidIntrastatCodeIds                  *Relation   `xmlrpc:"valid_intrastat_code_ids,omitempty"`
 	ValidProductTemplateAttributeLineIds   *Relation   `xmlrpc:"valid_product_template_attribute_line_ids,omitempty"`
 	Valuation                              *Selection  `xmlrpc:"valuation,omitempty"`
 	VariantSellerIds                       *Relation   `xmlrpc:"variant_seller_ids,omitempty"`

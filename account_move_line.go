@@ -2,8 +2,10 @@ package odoo
 
 // AccountMoveLine represents account.move.line model.
 type AccountMoveLine struct {
+	AccountCode                     *String     `xmlrpc:"account_code,omitempty"`
 	AccountId                       *Many2One   `xmlrpc:"account_id,omitempty"`
 	AccountInternalGroup            *Selection  `xmlrpc:"account_internal_group,omitempty"`
+	AccountName                     *String     `xmlrpc:"account_name,omitempty"`
 	AccountRootId                   *Many2One   `xmlrpc:"account_root_id,omitempty"`
 	AccountType                     *Selection  `xmlrpc:"account_type,omitempty"`
 	AmountCurrency                  *Float      `xmlrpc:"amount_currency,omitempty"`
@@ -15,6 +17,7 @@ type AccountMoveLine struct {
 	AssetIds                        *Relation   `xmlrpc:"asset_ids,omitempty"`
 	Balance                         *Float      `xmlrpc:"balance,omitempty"`
 	CogsOriginId                    *Many2One   `xmlrpc:"cogs_origin_id,omitempty"`
+	CommercialPartnerCountry        *Many2One   `xmlrpc:"commercial_partner_country,omitempty"`
 	CompanyCurrencyId               *Many2One   `xmlrpc:"company_currency_id,omitempty"`
 	CompanyId                       *Many2One   `xmlrpc:"company_id,omitempty"`
 	CreateDate                      *Time       `xmlrpc:"create_date,omitempty"`
@@ -42,7 +45,6 @@ type AccountMoveLine struct {
 	EpdKey                          *String     `xmlrpc:"epd_key,omitempty"`
 	EpdNeeded                       *String     `xmlrpc:"epd_needed,omitempty"`
 	ExcludeBankLines                *Bool       `xmlrpc:"exclude_bank_lines,omitempty"`
-	ExpenseId                       *Many2One   `xmlrpc:"expense_id,omitempty"`
 	FollowupLineId                  *Many2One   `xmlrpc:"followup_line_id,omitempty"`
 	FullReconcileId                 *Many2One   `xmlrpc:"full_reconcile_id,omitempty"`
 	GroupTaxId                      *Many2One   `xmlrpc:"group_tax_id,omitempty"`

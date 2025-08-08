@@ -7,6 +7,7 @@ type SaleOrderSpreadsheet struct {
 	CreateUid              *Many2One `xmlrpc:"create_uid,omitempty"`
 	CurrentRevisionUuid    *String   `xmlrpc:"current_revision_uuid,omitempty"`
 	DisplayName            *String   `xmlrpc:"display_name,omitempty"`
+	DisplayThumbnail       *String   `xmlrpc:"display_thumbnail,omitempty"`
 	Id                     *Int      `xmlrpc:"id,omitempty"`
 	Name                   *String   `xmlrpc:"name,omitempty"`
 	OrderId                *Many2One `xmlrpc:"order_id,omitempty"`

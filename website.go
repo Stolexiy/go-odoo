@@ -22,6 +22,7 @@ type Website struct {
 	DefaultLangId                  *Many2One  `xmlrpc:"default_lang_id,omitempty"`
 	DisplayName                    *String    `xmlrpc:"display_name,omitempty"`
 	Domain                         *String    `xmlrpc:"domain,omitempty"`
+	DomainPunycode                 *String    `xmlrpc:"domain_punycode,omitempty"`
 	Favicon                        *String    `xmlrpc:"favicon,omitempty"`
 	GoogleAnalyticsKey             *String    `xmlrpc:"google_analytics_key,omitempty"`
 	GoogleMapsApiKey               *String    `xmlrpc:"google_maps_api_key,omitempty"`

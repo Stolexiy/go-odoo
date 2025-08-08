@@ -11,7 +11,7 @@ type XStyle struct {
 	XName       *String   `xmlrpc:"x_name,omitempty"`
 }
 
-// XStyleS represents array of x_style model.
+// XStyles represents array of x_style model.
 type XStyleS []XStyle
 
 // XStyleModel is the odoo model name.
@@ -34,7 +34,7 @@ func (c *Client) CreateXStyle(x *XStyle) (int64, error) {
 	return ids[0], nil
 }
 
-// CreateXStyleS creates a new x_style model and returns its id.
+// CreateXStyle creates a new x_style model and returns its id.
 func (c *Client) CreateXStyleS(xs []*XStyle) ([]int64, error) {
 	var vv []interface{}
 	for _, v := range xs {

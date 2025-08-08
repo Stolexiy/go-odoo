@@ -2,36 +2,37 @@ package odoo
 
 // MailActivityType represents mail.activity.type model.
 type MailActivityType struct {
-	Active               *Bool      `xmlrpc:"active,omitempty"`
-	Category             *Selection `xmlrpc:"category,omitempty"`
-	ChainingType         *Selection `xmlrpc:"chaining_type,omitempty"`
-	CreateDate           *Time      `xmlrpc:"create_date,omitempty"`
-	CreateUid            *Many2One  `xmlrpc:"create_uid,omitempty"`
-	DecorationType       *Selection `xmlrpc:"decoration_type,omitempty"`
-	DefaultNote          *String    `xmlrpc:"default_note,omitempty"`
-	DefaultUserId        *Many2One  `xmlrpc:"default_user_id,omitempty"`
-	DelayCount           *Int       `xmlrpc:"delay_count,omitempty"`
-	DelayFrom            *Selection `xmlrpc:"delay_from,omitempty"`
-	DelayLabel           *String    `xmlrpc:"delay_label,omitempty"`
-	DelayUnit            *Selection `xmlrpc:"delay_unit,omitempty"`
-	DisplayName          *String    `xmlrpc:"display_name,omitempty"`
-	FolderId             *Many2One  `xmlrpc:"folder_id,omitempty"`
-	Icon                 *String    `xmlrpc:"icon,omitempty"`
-	Id                   *Int       `xmlrpc:"id,omitempty"`
-	InitialResModel      *Selection `xmlrpc:"initial_res_model,omitempty"`
-	KeepDone             *Bool      `xmlrpc:"keep_done,omitempty"`
-	MailTemplateIds      *Relation  `xmlrpc:"mail_template_ids,omitempty"`
-	Name                 *String    `xmlrpc:"name,omitempty"`
-	PreviousTypeIds      *Relation  `xmlrpc:"previous_type_ids,omitempty"`
-	ResModel             *Selection `xmlrpc:"res_model,omitempty"`
-	ResModelChange       *Bool      `xmlrpc:"res_model_change,omitempty"`
-	Sequence             *Int       `xmlrpc:"sequence,omitempty"`
-	SuggestedNextTypeIds *Relation  `xmlrpc:"suggested_next_type_ids,omitempty"`
-	Summary              *String    `xmlrpc:"summary,omitempty"`
-	TagIds               *Relation  `xmlrpc:"tag_ids,omitempty"`
-	TriggeredNextTypeId  *Many2One  `xmlrpc:"triggered_next_type_id,omitempty"`
-	WriteDate            *Time      `xmlrpc:"write_date,omitempty"`
-	WriteUid             *Many2One  `xmlrpc:"write_uid,omitempty"`
+	Active                *Bool      `xmlrpc:"active,omitempty"`
+	Category              *Selection `xmlrpc:"category,omitempty"`
+	ChainingType          *Selection `xmlrpc:"chaining_type,omitempty"`
+	CreateDate            *Time      `xmlrpc:"create_date,omitempty"`
+	CreateUid             *Many2One  `xmlrpc:"create_uid,omitempty"`
+	DecorationType        *Selection `xmlrpc:"decoration_type,omitempty"`
+	DefaultNote           *String    `xmlrpc:"default_note,omitempty"`
+	DefaultSignTemplateId *Many2One  `xmlrpc:"default_sign_template_id,omitempty"`
+	DefaultUserId         *Many2One  `xmlrpc:"default_user_id,omitempty"`
+	DelayCount            *Int       `xmlrpc:"delay_count,omitempty"`
+	DelayFrom             *Selection `xmlrpc:"delay_from,omitempty"`
+	DelayLabel            *String    `xmlrpc:"delay_label,omitempty"`
+	DelayUnit             *Selection `xmlrpc:"delay_unit,omitempty"`
+	DisplayName           *String    `xmlrpc:"display_name,omitempty"`
+	FolderId              *Many2One  `xmlrpc:"folder_id,omitempty"`
+	Icon                  *String    `xmlrpc:"icon,omitempty"`
+	Id                    *Int       `xmlrpc:"id,omitempty"`
+	InitialResModel       *Selection `xmlrpc:"initial_res_model,omitempty"`
+	KeepDone              *Bool      `xmlrpc:"keep_done,omitempty"`
+	MailTemplateIds       *Relation  `xmlrpc:"mail_template_ids,omitempty"`
+	Name                  *String    `xmlrpc:"name,omitempty"`
+	PreviousTypeIds       *Relation  `xmlrpc:"previous_type_ids,omitempty"`
+	ResModel              *Selection `xmlrpc:"res_model,omitempty"`
+	ResModelChange        *Bool      `xmlrpc:"res_model_change,omitempty"`
+	Sequence              *Int       `xmlrpc:"sequence,omitempty"`
+	SuggestedNextTypeIds  *Relation  `xmlrpc:"suggested_next_type_ids,omitempty"`
+	Summary               *String    `xmlrpc:"summary,omitempty"`
+	TagIds                *Relation  `xmlrpc:"tag_ids,omitempty"`
+	TriggeredNextTypeId   *Many2One  `xmlrpc:"triggered_next_type_id,omitempty"`
+	WriteDate             *Time      `xmlrpc:"write_date,omitempty"`
+	WriteUid              *Many2One  `xmlrpc:"write_uid,omitempty"`
 }
 
 // MailActivityTypes represents array of mail.activity.type model.

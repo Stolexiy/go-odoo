@@ -97,6 +97,7 @@ type SaleOrderLine struct {
 	TaxId                             *Relation   `xmlrpc:"tax_id,omitempty"`
 	TechnicalPriceUnit                *Float      `xmlrpc:"technical_price_unit,omitempty"`
 	TimesheetIds                      *Relation   `xmlrpc:"timesheet_ids,omitempty"`
+	TranslatedProductName             *String     `xmlrpc:"translated_product_name,omitempty"`
 	UntaxedAmountInvoiced             *Float      `xmlrpc:"untaxed_amount_invoiced,omitempty"`
 	UntaxedAmountToInvoice            *Float      `xmlrpc:"untaxed_amount_to_invoice,omitempty"`
 	VirtualAvailableAtDate            *Float      `xmlrpc:"virtual_available_at_date,omitempty"`
@@ -104,6 +105,7 @@ type SaleOrderLine struct {
 	WarehouseId                       *Many2One   `xmlrpc:"warehouse_id,omitempty"`
 	WriteDate                         *Time       `xmlrpc:"write_date,omitempty"`
 	WriteUid                          *Many2One   `xmlrpc:"write_uid,omitempty"`
+	XStudioMany2ManyFieldYFwOp        *Relation   `xmlrpc:"x_studio_many2many_field_yFwOp,omitempty"`
 }
 
 // SaleOrderLines represents array of sale.order.line model.

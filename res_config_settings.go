@@ -45,7 +45,6 @@ type ResConfigSettings struct {
 	CompanyCountryCode                          *String    `xmlrpc:"company_country_code,omitempty"`
 	CompanyCountryId                            *Many2One  `xmlrpc:"company_country_id,omitempty"`
 	CompanyCurrencyId                           *Many2One  `xmlrpc:"company_currency_id,omitempty"`
-	CompanyExpenseAllowedPaymentMethodLineIds   *Relation  `xmlrpc:"company_expense_allowed_payment_method_line_ids,omitempty"`
 	CompanyId                                   *Many2One  `xmlrpc:"company_id,omitempty"`
 	CompanyInformations                         *String    `xmlrpc:"company_informations,omitempty"`
 	CompanyName                                 *String    `xmlrpc:"company_name,omitempty"`
@@ -87,14 +86,13 @@ type ResConfigSettings struct {
 	DocumentsHrFolder                           *Many2One  `xmlrpc:"documents_hr_folder,omitempty"`
 	DocumentsHrSettings                         *Bool      `xmlrpc:"documents_hr_settings,omitempty"`
 	DocumentsProductSettings                    *Bool      `xmlrpc:"documents_product_settings,omitempty"`
+	DocumentsSignFolderId                       *Many2One  `xmlrpc:"documents_sign_folder_id,omitempty"`
 	Domain                                      *String    `xmlrpc:"domain,omitempty"`
 	EmailPrimaryColor                           *String    `xmlrpc:"email_primary_color,omitempty"`
 	EmailSecondaryColor                         *String    `xmlrpc:"email_secondary_color,omitempty"`
 	Enable                                      *Bool      `xmlrpc:"enable,omitempty"`
 	EnableOcn                                   *Bool      `xmlrpc:"enable_ocn,omitempty"`
 	ExpenseCurrencyExchangeAccountId            *Many2One  `xmlrpc:"expense_currency_exchange_account_id,omitempty"`
-	ExpenseJournalId                            *Many2One  `xmlrpc:"expense_journal_id,omitempty"`
-	ExpenseOutstandingAccountId                 *Many2One  `xmlrpc:"expense_outstanding_account_id,omitempty"`
 	ExternalEmailServerDefault                  *Bool      `xmlrpc:"external_email_server_default,omitempty"`
 	ExternalReportLayoutId                      *Many2One  `xmlrpc:"external_report_layout_id,omitempty"`
 	ExtractBankStatementDigitalizationMode      *Selection `xmlrpc:"extract_bank_statement_digitalization_mode,omitempty"`
@@ -122,6 +120,7 @@ type ResConfigSettings struct {
 	GroupFiscalYear                             *Bool      `xmlrpc:"group_fiscal_year,omitempty"`
 	GroupLotOnDeliverySlip                      *Bool      `xmlrpc:"group_lot_on_delivery_slip,omitempty"`
 	GroupLotOnInvoice                           *Bool      `xmlrpc:"group_lot_on_invoice,omitempty"`
+	GroupManageTemplateAccess                   *Bool      `xmlrpc:"group_manage_template_access,omitempty"`
 	GroupMultiCurrency                          *Bool      `xmlrpc:"group_multi_currency,omitempty"`
 	GroupMultiWebsite                           *Bool      `xmlrpc:"group_multi_website,omitempty"`
 	GroupProductPricelist                       *Bool      `xmlrpc:"group_product_pricelist,omitempty"`
@@ -162,8 +161,6 @@ type ResConfigSettings struct {
 	HasGoogleSearchConsole                      *Bool      `xmlrpc:"has_google_search_console,omitempty"`
 	HasPlausibleSharedKey                       *Bool      `xmlrpc:"has_plausible_shared_key,omitempty"`
 	HrEmployeeSelfEdit                          *Bool      `xmlrpc:"hr_employee_self_edit,omitempty"`
-	HrExpenseAliasPrefix                        *String    `xmlrpc:"hr_expense_alias_prefix,omitempty"`
-	HrExpenseUseMailgateway                     *Bool      `xmlrpc:"hr_expense_use_mailgateway,omitempty"`
 	HrPresenceControlEmail                      *Bool      `xmlrpc:"hr_presence_control_email,omitempty"`
 	HrPresenceControlEmailAmount                *Int       `xmlrpc:"hr_presence_control_email_amount,omitempty"`
 	HrPresenceControlIp                         *Bool      `xmlrpc:"hr_presence_control_ip,omitempty"`
@@ -240,9 +237,7 @@ type ResConfigSettings struct {
 	ModuleGoogleGmail                           *Bool      `xmlrpc:"module_google_gmail,omitempty"`
 	ModuleGoogleRecaptcha                       *Bool      `xmlrpc:"module_google_recaptcha,omitempty"`
 	ModuleHrAttendance                          *Bool      `xmlrpc:"module_hr_attendance,omitempty"`
-	ModuleHrExpenseExtract                      *Bool      `xmlrpc:"module_hr_expense_extract,omitempty"`
 	ModuleHrHomeworking                         *Bool      `xmlrpc:"module_hr_homeworking,omitempty"`
-	ModuleHrPayrollExpense                      *Bool      `xmlrpc:"module_hr_payroll_expense,omitempty"`
 	ModuleHrPresence                            *Bool      `xmlrpc:"module_hr_presence,omitempty"`
 	ModuleHrSkills                              *Bool      `xmlrpc:"module_hr_skills,omitempty"`
 	ModuleHrTimesheet                           *Bool      `xmlrpc:"module_hr_timesheet,omitempty"`
@@ -279,6 +274,7 @@ type ResConfigSettings struct {
 	ModuleSalePdfQuoteBuilder                   *Bool      `xmlrpc:"module_sale_pdf_quote_builder,omitempty"`
 	ModuleSaleProductMatrix                     *Bool      `xmlrpc:"module_sale_product_matrix,omitempty"`
 	ModuleSign                                  *Bool      `xmlrpc:"module_sign,omitempty"`
+	ModuleSignItsme                             *Bool      `xmlrpc:"module_sign_itsme,omitempty"`
 	ModuleSms                                   *Bool      `xmlrpc:"module_sms,omitempty"`
 	ModuleSnailmailAccount                      *Bool      `xmlrpc:"module_snailmail_account,omitempty"`
 	ModuleStockBarcode                          *Bool      `xmlrpc:"module_stock_barcode,omitempty"`
@@ -381,6 +377,7 @@ type ResConfigSettings struct {
 	PosShipLater                                *Bool      `xmlrpc:"pos_ship_later,omitempty"`
 	PosShowCategoryImages                       *Bool      `xmlrpc:"pos_show_category_images,omitempty"`
 	PosShowProductImages                        *Bool      `xmlrpc:"pos_show_product_images,omitempty"`
+	PosSmsReceiptTemplateId                     *Many2One  `xmlrpc:"pos_sms_receipt_template_id,omitempty"`
 	PosTaxRegimeSelection                       *Bool      `xmlrpc:"pos_tax_regime_selection,omitempty"`
 	PosTipProductId                             *Many2One  `xmlrpc:"pos_tip_product_id,omitempty"`
 	PosTrustedConfigIds                         *Relation  `xmlrpc:"pos_trusted_config_ids,omitempty"`
@@ -431,6 +428,10 @@ type ResConfigSettings struct {
 	ShowBarcodeNomenclature                     *Bool      `xmlrpc:"show_barcode_nomenclature,omitempty"`
 	ShowEffect                                  *Bool      `xmlrpc:"show_effect,omitempty"`
 	SignInvoice                                 *Bool      `xmlrpc:"sign_invoice,omitempty"`
+	SignPreviewReady                            *Bool      `xmlrpc:"sign_preview_ready,omitempty"`
+	SignTerms                                   *String    `xmlrpc:"sign_terms,omitempty"`
+	SignTermsHtml                               *String    `xmlrpc:"sign_terms_html,omitempty"`
+	SignTermsType                               *Selection `xmlrpc:"sign_terms_type,omitempty"`
 	SigningUser                                 *Many2One  `xmlrpc:"signing_user,omitempty"`
 	SnailmailColor                              *Bool      `xmlrpc:"snailmail_color,omitempty"`
 	SnailmailCover                              *Bool      `xmlrpc:"snailmail_cover,omitempty"`
@@ -465,6 +466,7 @@ type ResConfigSettings struct {
 	UseInvoiceTerms                             *Bool      `xmlrpc:"use_invoice_terms,omitempty"`
 	UsePoLead                                   *Bool      `xmlrpc:"use_po_lead,omitempty"`
 	UseSecurityLead                             *Bool      `xmlrpc:"use_security_lead,omitempty"`
+	UseSignTerms                                *Bool      `xmlrpc:"use_sign_terms,omitempty"`
 	UseTwilioRtcServers                         *Bool      `xmlrpc:"use_twilio_rtc_servers,omitempty"`
 	UserDefaultRights                           *Bool      `xmlrpc:"user_default_rights,omitempty"`
 	VatCheckVies                                *Bool      `xmlrpc:"vat_check_vies,omitempty"`

@@ -8,6 +8,7 @@ type SpreadsheetDashboardShare struct {
 	CurrentRevisionUuid    *String   `xmlrpc:"current_revision_uuid,omitempty"`
 	DashboardId            *Many2One `xmlrpc:"dashboard_id,omitempty"`
 	DisplayName            *String   `xmlrpc:"display_name,omitempty"`
+	DisplayThumbnail       *String   `xmlrpc:"display_thumbnail,omitempty"`
 	ExcelExport            *String   `xmlrpc:"excel_export,omitempty"`
 	FullUrl                *String   `xmlrpc:"full_url,omitempty"`
 	Id                     *Int      `xmlrpc:"id,omitempty"`

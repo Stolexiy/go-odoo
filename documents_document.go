@@ -55,6 +55,7 @@ type DocumentsDocument struct {
 	DeletionDelay                       *Int       `xmlrpc:"deletion_delay,omitempty"`
 	Description                         *String    `xmlrpc:"description,omitempty"`
 	DisplayName                         *String    `xmlrpc:"display_name,omitempty"`
+	DisplayThumbnail                    *String    `xmlrpc:"display_thumbnail,omitempty"`
 	DocumentCount                       *Int       `xmlrpc:"document_count,omitempty"`
 	DocumentToken                       *String    `xmlrpc:"document_token,omitempty"`
 	EmailCc                             *String    `xmlrpc:"email_cc,omitempty"`

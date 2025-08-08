@@ -2,25 +2,30 @@ package odoo
 
 // MailActivityPlanTemplate represents mail.activity.plan.template model.
 type MailActivityPlanTemplate struct {
-	ActivityTypeId  *Many2One  `xmlrpc:"activity_type_id,omitempty"`
-	CompanyId       *Many2One  `xmlrpc:"company_id,omitempty"`
-	CreateDate      *Time      `xmlrpc:"create_date,omitempty"`
-	CreateUid       *Many2One  `xmlrpc:"create_uid,omitempty"`
-	DelayCount      *Int       `xmlrpc:"delay_count,omitempty"`
-	DelayFrom       *Selection `xmlrpc:"delay_from,omitempty"`
-	DelayUnit       *Selection `xmlrpc:"delay_unit,omitempty"`
-	DisplayName     *String    `xmlrpc:"display_name,omitempty"`
-	Icon            *String    `xmlrpc:"icon,omitempty"`
-	Id              *Int       `xmlrpc:"id,omitempty"`
-	Note            *String    `xmlrpc:"note,omitempty"`
-	PlanId          *Many2One  `xmlrpc:"plan_id,omitempty"`
-	ResModel        *Selection `xmlrpc:"res_model,omitempty"`
-	ResponsibleId   *Many2One  `xmlrpc:"responsible_id,omitempty"`
-	ResponsibleType *Selection `xmlrpc:"responsible_type,omitempty"`
-	Sequence        *Int       `xmlrpc:"sequence,omitempty"`
-	Summary         *String    `xmlrpc:"summary,omitempty"`
-	WriteDate       *Time      `xmlrpc:"write_date,omitempty"`
-	WriteUid        *Many2One  `xmlrpc:"write_uid,omitempty"`
+	ActivityTypeId             *Many2One  `xmlrpc:"activity_type_id,omitempty"`
+	CompanyId                  *Many2One  `xmlrpc:"company_id,omitempty"`
+	CreateDate                 *Time      `xmlrpc:"create_date,omitempty"`
+	CreateUid                  *Many2One  `xmlrpc:"create_uid,omitempty"`
+	DelayCount                 *Int       `xmlrpc:"delay_count,omitempty"`
+	DelayFrom                  *Selection `xmlrpc:"delay_from,omitempty"`
+	DelayUnit                  *Selection `xmlrpc:"delay_unit,omitempty"`
+	DisplayName                *String    `xmlrpc:"display_name,omitempty"`
+	EmployeeRoleId             *Many2One  `xmlrpc:"employee_role_id,omitempty"`
+	Icon                       *String    `xmlrpc:"icon,omitempty"`
+	Id                         *Int       `xmlrpc:"id,omitempty"`
+	IsSignatureRequest         *Bool      `xmlrpc:"is_signature_request,omitempty"`
+	Note                       *String    `xmlrpc:"note,omitempty"`
+	PlanId                     *Many2One  `xmlrpc:"plan_id,omitempty"`
+	ResModel                   *Selection `xmlrpc:"res_model,omitempty"`
+	ResponsibleCount           *Int       `xmlrpc:"responsible_count,omitempty"`
+	ResponsibleId              *Many2One  `xmlrpc:"responsible_id,omitempty"`
+	ResponsibleType            *Selection `xmlrpc:"responsible_type,omitempty"`
+	Sequence                   *Int       `xmlrpc:"sequence,omitempty"`
+	SignTemplateId             *Many2One  `xmlrpc:"sign_template_id,omitempty"`
+	SignTemplateResponsibleIds *Relation  `xmlrpc:"sign_template_responsible_ids,omitempty"`
+	Summary                    *String    `xmlrpc:"summary,omitempty"`
+	WriteDate                  *Time      `xmlrpc:"write_date,omitempty"`
+	WriteUid                   *Many2One  `xmlrpc:"write_uid,omitempty"`
 }
 
 // MailActivityPlanTemplates represents array of mail.activity.plan.template model.

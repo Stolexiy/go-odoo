@@ -79,7 +79,7 @@ type AccountMove struct {
 	EdiShowForceCancelButton              *Bool       `xmlrpc:"edi_show_force_cancel_button,omitempty"`
 	EdiState                              *Selection  `xmlrpc:"edi_state,omitempty"`
 	EdiWebServicesToProcess               *String     `xmlrpc:"edi_web_services_to_process,omitempty"`
-	ExpenseSheetId                        *Many2One   `xmlrpc:"expense_sheet_id,omitempty"`
+	ExpectedCurrencyRate                  *Float      `xmlrpc:"expected_currency_rate,omitempty"`
 	ExtractAttachmentId                   *Many2One   `xmlrpc:"extract_attachment_id,omitempty"`
 	ExtractCanShowBanners                 *Bool       `xmlrpc:"extract_can_show_banners,omitempty"`
 	ExtractCanShowSendButton              *Bool       `xmlrpc:"extract_can_show_send_button,omitempty"`
@@ -152,6 +152,7 @@ type AccountMove struct {
 	MoveType                              *Selection  `xmlrpc:"move_type,omitempty"`
 	MyActivityDateDeadline                *Time       `xmlrpc:"my_activity_date_deadline,omitempty"`
 	Name                                  *String     `xmlrpc:"name,omitempty"`
+	NamePlaceholder                       *String     `xmlrpc:"name_placeholder,omitempty"`
 	Narration                             *String     `xmlrpc:"narration,omitempty"`
 	NeedCancelRequest                     *Bool       `xmlrpc:"need_cancel_request,omitempty"`
 	NeededTerms                           *String     `xmlrpc:"needed_terms,omitempty"`
@@ -195,7 +196,6 @@ type AccountMove struct {
 	SendingData                           interface{} `xmlrpc:"sending_data,omitempty"`
 	SequenceNumber                        *Int        `xmlrpc:"sequence_number,omitempty"`
 	SequencePrefix                        *String     `xmlrpc:"sequence_prefix,omitempty"`
-	ShowCommercialPartnerWarning          *Bool       `xmlrpc:"show_commercial_partner_warning,omitempty"`
 	ShowDeliveryDate                      *Bool       `xmlrpc:"show_delivery_date,omitempty"`
 	ShowDiscountDetails                   *Bool       `xmlrpc:"show_discount_details,omitempty"`
 	ShowNameWarning                       *Bool       `xmlrpc:"show_name_warning,omitempty"`
@@ -241,6 +241,7 @@ type AccountMove struct {
 	WebsiteMessageIds                     *Relation   `xmlrpc:"website_message_ids,omitempty"`
 	WriteDate                             *Time       `xmlrpc:"write_date,omitempty"`
 	WriteUid                              *Many2One   `xmlrpc:"write_uid,omitempty"`
+	XStudioCharFieldRMMHH                 *String     `xmlrpc:"x_studio_char_field_RMMHH,omitempty"`
 	XStudioCharFieldJ6YO4                 *String     `xmlrpc:"x_studio_char_field_j6yO4,omitempty"`
 	XStudioDatetimeFieldKjYuX             *Time       `xmlrpc:"x_studio_datetime_field_kjYuX,omitempty"`
 	XStudioMany2ManyField2FZOu            *Relation   `xmlrpc:"x_studio_many2many_field_2fZOu,omitempty"`

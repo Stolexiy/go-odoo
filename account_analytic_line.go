@@ -62,14 +62,10 @@ type AccountAnalyticLine struct {
 	ValidatedStatus          *Selection `xmlrpc:"validated_status,omitempty"`
 	WriteDate                *Time      `xmlrpc:"write_date,omitempty"`
 	WriteUid                 *Many2One  `xmlrpc:"write_uid,omitempty"`
-	XPlan155Id               *Many2One  `xmlrpc:"x_plan155_id,omitempty"`
 	XPlan159Id               *Many2One  `xmlrpc:"x_plan159_id,omitempty"`
-	XPlan161Id               *Many2One  `xmlrpc:"x_plan161_id,omitempty"`
-	XPlan16Id                *Many2One  `xmlrpc:"x_plan16_id,omitempty"`
 	XPlan17Id                *Many2One  `xmlrpc:"x_plan17_id,omitempty"`
 	XPlan18Id                *Many2One  `xmlrpc:"x_plan18_id,omitempty"`
 	XPlan19Id                *Many2One  `xmlrpc:"x_plan19_id,omitempty"`
-	XPlan24Id                *Many2One  `xmlrpc:"x_plan24_id,omitempty"`
 	XPlan26Id                *Many2One  `xmlrpc:"x_plan26_id,omitempty"`
 	XStudioCommentaire       *String    `xmlrpc:"x_studio_commentaire,omitempty"`
 	XStudioTiquettes         *Relation  `xmlrpc:"x_studio_tiquettes,omitempty"`

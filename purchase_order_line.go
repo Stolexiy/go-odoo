@@ -23,6 +23,7 @@ type PurchaseOrderLine struct {
 	InvoiceLines                      *Relation   `xmlrpc:"invoice_lines,omitempty"`
 	IsAboveBudget                     *Bool       `xmlrpc:"is_above_budget,omitempty"`
 	IsDownpayment                     *Bool       `xmlrpc:"is_downpayment,omitempty"`
+	IsStorable                        *Bool       `xmlrpc:"is_storable,omitempty"`
 	LocationFinalId                   *Many2One   `xmlrpc:"location_final_id,omitempty"`
 	MoveDestIds                       *Relation   `xmlrpc:"move_dest_ids,omitempty"`
 	MoveIds                           *Relation   `xmlrpc:"move_ids,omitempty"`

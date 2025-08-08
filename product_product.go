@@ -20,7 +20,6 @@ type ProductProduct struct {
 	AvailableInPos                         *Bool       `xmlrpc:"available_in_pos,omitempty"`
 	AvgCost                                *Float      `xmlrpc:"avg_cost,omitempty"`
 	Barcode                                *String     `xmlrpc:"barcode,omitempty"`
-	CanBeExpensed                          *Bool       `xmlrpc:"can_be_expensed,omitempty"`
 	CanImage1024BeZoomed                   *Bool       `xmlrpc:"can_image_1024_be_zoomed,omitempty"`
 	CanImageVariant1024BeZoomed            *Bool       `xmlrpc:"can_image_variant_1024_be_zoomed,omitempty"`
 	CategId                                *Many2One   `xmlrpc:"categ_id,omitempty"`
@@ -48,7 +47,6 @@ type ProductProduct struct {
 	ExpectedMargin                         *Float      `xmlrpc:"expected_margin,omitempty"`
 	ExpectedMarginRate                     *Float      `xmlrpc:"expected_margin_rate,omitempty"`
 	ExpensePolicy                          *Selection  `xmlrpc:"expense_policy,omitempty"`
-	ExpensePolicyTooltip                   *String     `xmlrpc:"expense_policy_tooltip,omitempty"`
 	FiscalCountryCodes                     *String     `xmlrpc:"fiscal_country_codes,omitempty"`
 	FreeQty                                *Float      `xmlrpc:"free_qty,omitempty"`
 	HasAvailableRouteIds                   *Bool       `xmlrpc:"has_available_route_ids,omitempty"`
@@ -67,6 +65,7 @@ type ProductProduct struct {
 	ImageVariant256                        *String     `xmlrpc:"image_variant_256,omitempty"`
 	ImageVariant512                        *String     `xmlrpc:"image_variant_512,omitempty"`
 	IncomingQty                            *Float      `xmlrpc:"incoming_qty,omitempty"`
+	IntrastatCodeDomain                    *String     `xmlrpc:"intrastat_code_domain,omitempty"`
 	IntrastatCodeId                        *Many2One   `xmlrpc:"intrastat_code_id,omitempty"`
 	IntrastatOriginCountryId               *Many2One   `xmlrpc:"intrastat_origin_country_id,omitempty"`
 	IntrastatSupplementaryUnit             *Selection  `xmlrpc:"intrastat_supplementary_unit,omitempty"`
@@ -166,7 +165,6 @@ type ProductProduct struct {
 	ShowForecastedQtyStatusButton          *Bool       `xmlrpc:"show_forecasted_qty_status_button,omitempty"`
 	ShowOnHandQtyStatusButton              *Bool       `xmlrpc:"show_on_hand_qty_status_button,omitempty"`
 	StandardPrice                          *Float      `xmlrpc:"standard_price,omitempty"`
-	StandardPriceUpdateWarning             *String     `xmlrpc:"standard_price_update_warning,omitempty"`
 	StockMoveIds                           *Relation   `xmlrpc:"stock_move_ids,omitempty"`
 	StockQuantIds                          *Relation   `xmlrpc:"stock_quant_ids,omitempty"`
 	StockValuationLayerIds                 *Relation   `xmlrpc:"stock_valuation_layer_ids,omitempty"`
@@ -187,6 +185,7 @@ type ProductProduct struct {
 	UomName                                *String     `xmlrpc:"uom_name,omitempty"`
 	UomPoId                                *Many2One   `xmlrpc:"uom_po_id,omitempty"`
 	ValidEan                               *Bool       `xmlrpc:"valid_ean,omitempty"`
+	ValidIntrastatCodeIds                  *Relation   `xmlrpc:"valid_intrastat_code_ids,omitempty"`
 	ValidProductTemplateAttributeLineIds   *Relation   `xmlrpc:"valid_product_template_attribute_line_ids,omitempty"`
 	Valuation                              *Selection  `xmlrpc:"valuation,omitempty"`
 	ValueSvl                               *Float      `xmlrpc:"value_svl,omitempty"`

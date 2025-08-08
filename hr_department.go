@@ -20,7 +20,6 @@ type HrDepartment struct {
 	CreateDate                  *Time      `xmlrpc:"create_date,omitempty"`
 	CreateUid                   *Many2One  `xmlrpc:"create_uid,omitempty"`
 	DisplayName                 *String    `xmlrpc:"display_name,omitempty"`
-	ExpenseSheetsToApproveCount *Int       `xmlrpc:"expense_sheets_to_approve_count,omitempty"`
 	HasMessage                  *Bool      `xmlrpc:"has_message,omitempty"`
 	HasReadAccess               *Bool      `xmlrpc:"has_read_access,omitempty"`
 	Id                          *Int       `xmlrpc:"id,omitempty"`

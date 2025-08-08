@@ -44,6 +44,7 @@ type AccountOnlineLink struct {
 	ProviderType                *String     `xmlrpc:"provider_type,omitempty"`
 	RatingIds                   *Relation   `xmlrpc:"rating_ids,omitempty"`
 	RefreshToken                *String     `xmlrpc:"refresh_token,omitempty"`
+	ShowSyncActions             *Bool       `xmlrpc:"show_sync_actions,omitempty"`
 	State                       *Selection  `xmlrpc:"state,omitempty"`
 	WebsiteMessageIds           *Relation   `xmlrpc:"website_message_ids,omitempty"`
 	WriteDate                   *Time       `xmlrpc:"write_date,omitempty"`

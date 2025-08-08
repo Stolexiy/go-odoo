@@ -32,7 +32,6 @@ type AccountPayment struct {
 	DisplayName                     *String    `xmlrpc:"display_name,omitempty"`
 	DuplicatePaymentIds             *Relation  `xmlrpc:"duplicate_payment_ids,omitempty"`
 	EndToEndId                      *String    `xmlrpc:"end_to_end_id,omitempty"`
-	ExpenseSheetId                  *Many2One  `xmlrpc:"expense_sheet_id,omitempty"`
 	ForceOutstandingAccountId       *Many2One  `xmlrpc:"force_outstanding_account_id,omitempty"`
 	HasMessage                      *Bool      `xmlrpc:"has_message,omitempty"`
 	Id                              *Int       `xmlrpc:"id,omitempty"`

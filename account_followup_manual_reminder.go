@@ -21,8 +21,6 @@ type AccountFollowupManualReminder struct {
 	Sms                  *Bool     `xmlrpc:"sms,omitempty"`
 	SmsBody              *String   `xmlrpc:"sms_body,omitempty"`
 	SmsTemplateId        *Many2One `xmlrpc:"sms_template_id,omitempty"`
-	Snailmail            *Bool     `xmlrpc:"snailmail,omitempty"`
-	SnailmailCost        *Float    `xmlrpc:"snailmail_cost,omitempty"`
 	Subject              *String   `xmlrpc:"subject,omitempty"`
 	TemplateId           *Many2One `xmlrpc:"template_id,omitempty"`
 	WriteDate            *Time     `xmlrpc:"write_date,omitempty"`

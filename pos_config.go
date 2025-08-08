@@ -94,6 +94,7 @@ type PosConfig struct {
 	ShipLater                           *Bool      `xmlrpc:"ship_later,omitempty"`
 	ShowCategoryImages                  *Bool      `xmlrpc:"show_category_images,omitempty"`
 	ShowProductImages                   *Bool      `xmlrpc:"show_product_images,omitempty"`
+	SmsReceiptTemplateId                *Many2One  `xmlrpc:"sms_receipt_template_id,omitempty"`
 	TaxRegimeSelection                  *Bool      `xmlrpc:"tax_regime_selection,omitempty"`
 	TipProductId                        *Many2One  `xmlrpc:"tip_product_id,omitempty"`
 	TrustedConfigIds                    *Relation  `xmlrpc:"trusted_config_ids,omitempty"`

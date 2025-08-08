@@ -22,8 +22,6 @@ type HrEmployeePublic struct {
 	DisplayName        *String    `xmlrpc:"display_name,omitempty"`
 	Email              *String    `xmlrpc:"email,omitempty"`
 	EmployeeId         *Many2One  `xmlrpc:"employee_id,omitempty"`
-	ExpenseManagerId   *Many2One  `xmlrpc:"expense_manager_id,omitempty"`
-	FilterForExpense   *Bool      `xmlrpc:"filter_for_expense,omitempty"`
 	FirstContractDate  *Time      `xmlrpc:"first_contract_date,omitempty"`
 	HasSlots           *Bool      `xmlrpc:"has_slots,omitempty"`
 	HrIconDisplay      *Selection `xmlrpc:"hr_icon_display,omitempty"`
