@@ -154,6 +154,7 @@ type ProductProduct struct {
 	SaleOk                                 *Bool       `xmlrpc:"sale_ok,omitempty"`
 	SalesCount                             *Float      `xmlrpc:"sales_count,omitempty"`
 	SalesGap                               *Float      `xmlrpc:"sales_gap,omitempty"`
+	SelfOrderAvailable                     *Bool       `xmlrpc:"self_order_available,omitempty"`
 	SellerIds                              *Relation   `xmlrpc:"seller_ids,omitempty"`
 	Sequence                               *Int        `xmlrpc:"sequence,omitempty"`
 	ServicePolicy                          *Selection  `xmlrpc:"service_policy,omitempty"`
@@ -217,7 +218,7 @@ type ProductProduct struct {
 	XStudioCountryRef                      *Relation   `xmlrpc:"x_studio_country_ref,omitempty"`
 	XStudioFormatDescription               *String     `xmlrpc:"x_studio_format_description,omitempty"`
 	XStudioGenre                           *Relation   `xmlrpc:"x_studio_genre,omitempty"`
-	XStudioInstanceId                      *Int        `xmlrpc:"x_studio_instance_id,omitempty"`
+	XStudioInstanceId                      *String     `xmlrpc:"x_studio_instance_id,omitempty"`
 	XStudioIntegerFieldYOcml               *Int        `xmlrpc:"x_studio_integer_field_YOcml,omitempty"`
 	XStudioLabels                          *Relation   `xmlrpc:"x_studio_labels,omitempty"`
 	XStudioMany2ManyFieldAF3BN             *Relation   `xmlrpc:"x_studio_many2many_field_AF3BN,omitempty"`
